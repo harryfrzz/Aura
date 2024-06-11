@@ -1,23 +1,16 @@
 setInterval(changeTime,1000);
-
 function changeTime(){
     const d = new Date();
     const timeObject = document.getElementById("time");
     let hour = d.getHours();
     let minutes = d.getMinutes();
-    
-    if(hour < 10){
-        timeObject.textContent = `0${hour}:${minutes}`;
+    hour = hour < 10 ? "0" + hour : hour;
+    minutes = minutes < 10 ? "0" + minutes : minutes;
+    timeObject.textContent = `${hour}:${minutes}`;
+    if(hour == 0){
+        changeDate();
     }
-    if(minutes < 10){
-        timeObject.textContent = `${hour}:0${minutes}`;
-    }
-    if(minutes < 10 && hour < 10){
-        timeObject.textContent = `0${hour}:0${minutes}`;
-    }
-    
 }
-
 function changeDate(){
     const d = new Date();
     const dateObject = document.getElementById("date");
@@ -41,4 +34,5 @@ function changeDate(){
 }
 changeTime();
 changeDate();
+
 

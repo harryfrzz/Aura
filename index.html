@@ -1,106 +1,113 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" href="styles/styles.css">
-        <link rel="stylesheet" href="styles/TaskCSS.css"
-    </head>
-    <body>
-        <div id="bottomBar">
-            <button id="settings" type="button">Settings</button>
-            <button id="tasks" type="button">Tasks</button>
-            <button id="timer" type="button">Timer</button>
-            <img src="icons/fullscreen.png" width="25" height="25">
+<head>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/TaskCSS.css">
+    <link rel="stylesheet" href="styles/Popup.css">
+</head>
+<body>
+    <div id="bottomBar">
+        <img id="settings" src="icons/settings.png" width="30" height="30">
+        <img id="tasks" src="icons/task.png" width="30" height="30">
+        <img id="fullscreen" src="icons/fullscreen.png" width="30" height="30">
+    </div>
+    <div id="grid">
+        <div id="griditem">
+            <h1 id="time" style="margin-top: 300px; margin-left: 100px; font-size: 5vw;">00:00</h1>
+            <h2 id="date" style="font-size: 3vw; margin-left: 100px;">It's Wednesday</h2>
         </div>
-        <div id="grid">
-            <div id="griditem">
-                <h1 id="time" style="margin-top: 300px; margin-left: 100px; font-size: 5vw; ">00:00</h1>
-                <h2 id="date" style="font-size: 3vw; margin-left: 100px;">It's Wednesday</h2>
+    </div>
+    <div id="link-area">
+        <div id="linksBox">
+            <div id="linkObject">
+                <a id="link" href="https://www.google.com" style="color: aliceblue;">Google</a>
+            </div>
+            <div id="linkObject">
+                <a id="link" href="https://www.google.com" style="color: aliceblue;">Google</a>
+            </div>
+            <div id="linkObject">
+                <a id="link" href="https://www.google.com" style="color: aliceblue;">Google</a>
+            </div>
+            <div id="linkObject">
+                <a id="link" href="https://www.google.com" style="color: aliceblue;">Google</a>
+            </div>
+            <button type="button" id="addLink">+</button>
+            <div id="myPopup" class="popup">
+                <div class="popup-content">
+                    <h1 style="color: black">
+                        Add links</h1>
+                    <input type="text" id="linkSpace">
+                    <button type="submit" id="linkAddBtn">Add</button>
+                    <button id="closePopup">Close</button>
+                </div>
             </div>
         </div>
-        <div id="link-area">
-            <div id="linksBox">
-                <div id="linkObject">
-                    <a id="link" href="www.google.com" style="color: aliceblue;">Google</a>
-                </div>
-                <div id="linkObject">
-                    <a id="link" href="www.google.com" style="color: aliceblue;">Google</a>
-                </div>
-                <div id="linkObject">
-                    <a id="link" href="www.google.com" style="color: aliceblue;">Google</a>
-                </div>
-                <div id="linkObject">
-                    <a id="link" href="www.google.com" style="color: aliceblue;">Google</a>
-                </div>
-                <button type="button" id="addLink">+</button>
-                </div>
-            </div>  
-        </div>
+    </div>  
 
-        <!--HTML Code for Task management-->
+    <!-- HTML Code for Task management -->
 
-        <div class="container">
-            <div id="gridView">
-                <div id="item">
-                    <div id="itemBar">
-                        <h1 id="headingNT">Tasks</h1>
-                        <button id="clearAllTask" type="submit">Clear All Tasks</button>
-                        <script>
-                            var clear = document.getElementById("clearAllTask");
-                            clear.onclick = function(){
+    <div class="container">
+        <div id="gridView">
+            <div id="item">
+                <div id="itemBar">
+                    <h1 id="headingNT">Tasks</h1>
+                    <button id="clearAllTask" type="submit">Clear All Tasks</button>
+                    <script>
+                        var clear = document.getElementById("clearAllTask");
+                        clear.onclick = function() {
                             for (let f = 0; f < localStorage.length; f++) { 
                                 localStorage.removeItem(localStorage.key(f));
                             }
-                            window.location.reload()
+                            window.location.reload();
                             console.log("Cleared");
                         }
-                        </script>
-                    </div>
-                    <div id="taskObject">
-                            <input placeholder="Enter Task" type="text" id="task">
-                            <button type="submit" id="submitBut">Submit</button>
-                            <button type="submit" onclick="rmv(this)" id="delete-default">Submit</button>
-                            <script>
-                                function rmv(btn){
-                                    var buttonID = btn.id;
-                                    var keyarr = [];
-                                    for (let i = 0; i < localStorage.length; i++) { 
-                                        let values = localStorage.key(i);
-                                        keyarr.push(values);
-                                    }
-                                    keyarr.sort();
-                                    for (let j = 0; j < localStorage.length; j++) {
-                                        if(keyarr[j].slice(0,-5) == buttonID.slice(0,-7)){
-                                        localStorage.removeItem(keyarr[j]);
-                                        }  
-                                    }
-                                    window.location.reload()
-                                }
-                            </script>
-                            <script>
-                                function dno(btn){
-                                    var buttonID = btn.id;
-                                    var keyarr = [];
-                                    document.getElementById(buttonID).style.background = "green";
-                                    for (let i = 0; i < localStorage.length; i++) { 
-                                        let values = localStorage.key(i);
-                                        keyarr.push(values);
-                                    }
-                                    keyarr.sort();
-                                    for (let j = 0; j < localStorage.length; j++) {
-                                        if(keyarr[j].slice(0,-5) == buttonID.slice(0,-7)){
-                                        localStorage.removeItem(keyarr[j]);
-                                        }  
-                                    }
-                                    window.location.reload()
-                                }
-                            </script>
-                    </div>
-                    <div id="objectHolder">    
-                    </div>
+                    </script>
                 </div>
+                <div id="taskObject">
+                    <input placeholder="Enter Task" type="text" id="task">
+                    <button type="submit" id="submitBut">Submit</button>
+                    <button type="submit" onclick="rmv(this)" id="delete-default">Submit</button>
+                    <script>
+                        function rmv(btn) {
+                            var buttonID = btn.id;
+                            var keyarr = [];
+                            for (let i = 0; i < localStorage.length; i++) { 
+                                let values = localStorage.key(i);
+                                keyarr.push(values);
+                            }
+                            keyarr.sort();
+                            for (let j = 0; j < localStorage.length; j++) {
+                                if(keyarr[j].slice(0,-5) == buttonID.slice(0,-7)){
+                                    localStorage.removeItem(keyarr[j]);
+                                }  
+                            }
+                            window.location.reload();
+                        }
+
+                        function dno(btn) {
+                            var buttonID = btn.id;
+                            var keyarr = [];
+                            document.getElementById(buttonID).style.background = "green";
+                            for (let i = 0; i < localStorage.length; i++) { 
+                                let values = localStorage.key(i);
+                                keyarr.push(values);
+                            }
+                            keyarr.sort();
+                            for (let j = 0; j < localStorage.length; j++) {
+                                if(keyarr[j].slice(0,-5) == buttonID.slice(0,-7)){
+                                    localStorage.removeItem(keyarr[j]);
+                                }  
+                            }
+                            window.location.reload();
+                        }
+                    </script>
+                </div>
+                <div id="objectHolder"></div>
             </div>
         </div>
-        <script src="Scripts/TimeAndDate.js"></script>
-        <script src="Scripts/localStorage.js"></script>
-    </body>
+    </div>
+    <script src="Scripts/localStorage.js"></script>
+    <script src="Scripts/TimeAndDate.js"></script>
+    <script src="Scripts/AddLinkPopUp.js"></script>
+</body>
 </html>

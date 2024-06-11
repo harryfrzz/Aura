@@ -33,7 +33,6 @@ function main(){
       let values = localStorage.key(i);
       keyArray.push(values);
     }
-
     keyArray.sort();
     for (let j = 0; j < localStorage.length; j++){
       var htmlObj = localStorage.getItem(keyArray[j]);
