@@ -6,7 +6,8 @@ body::-webkit-scrollbar{
     justify-content: center;
     margin-top: -220px;
 }
-#linksBox{
+
+#linkHolder{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -30,16 +31,12 @@ body::-webkit-scrollbar{
 #link{
     margin-top: 20px;
     text-decoration: none;
+    color: aliceblue;
 }
 #addLink{
-    width: 55px;
-    height: fit-content;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    border-radius: 15px;
-    font-size: 1.5em;
-    padding: 14px;
-    border: none;
+    margin-top: 2px;
+    background-color: blueviolet;
+    border-radius: 100%;
 }
 
 

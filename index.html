@@ -7,6 +7,7 @@
 </head>
 <body>
     <div id="bottomBar">
+        <img id="addLink" src="icons/add.png" width="30" height="30">
         <img id="settings" src="icons/settings.png" width="30" height="30">
         <img id="tasks" src="icons/task.png" width="30" height="30">
         <img id="fullscreen" src="icons/fullscreen.png" width="30" height="30">
@@ -19,24 +20,17 @@
     </div>
     <div id="link-area">
         <div id="linksBox">
-            <div id="linkObject">
-                <a id="link" href="https://www.google.com" style="color: aliceblue;">Google</a>
+            <div id="linkHolder">
+                <div id="linkObject">
+                    <a id="link">Add link Using +</a> 
+                   </div>
             </div>
-            <div id="linkObject">
-                <a id="link" href="https://www.google.com" style="color: aliceblue;">Google</a>
-            </div>
-            <div id="linkObject">
-                <a id="link" href="https://www.google.com" style="color: aliceblue;">Google</a>
-            </div>
-            <div id="linkObject">
-                <a id="link" href="https://www.google.com" style="color: aliceblue;">Google</a>
-            </div>
-            <button type="button" id="addLink">+</button>
             <div id="myPopup" class="popup">
                 <div class="popup-content">
                     <h1 style="color: black">
                         Add links</h1>
-                    <input type="text" id="linkSpace">
+                    <input type="text" placeholder="Enter Name" id="linkName">
+                    <input type="text" placeholder="Link Address" id="linkSpace">
                     <button type="submit" id="linkAddBtn">Add</button>
                     <button id="closePopup">Close</button>
                 </div>
@@ -106,7 +100,8 @@
             </div>
         </div>
     </div>
-    <script src="Scripts/localStorage.js"></script>
+    <script src="Scripts/LocalStorageTasks.js"></script>
+    <script src="Scripts/LocalStorageLinks.js"></script>
     <script src="Scripts/TimeAndDate.js"></script>
     <script src="Scripts/AddLinkPopUp.js"></script>
 </body>

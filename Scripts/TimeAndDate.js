@@ -1,5 +1,5 @@
 setInterval(changeTime,1000);
-function changeTime(){
+function changeTime(callback){
     const d = new Date();
     const timeObject = document.getElementById("time");
     let hour = d.getHours();
@@ -8,7 +8,7 @@ function changeTime(){
     minutes = minutes < 10 ? "0" + minutes : minutes;
     timeObject.textContent = `${hour}:${minutes}`;
     if(hour == 0){
-        changeDate();
+        callback();
     }
 }
 function changeDate(){
@@ -32,7 +32,7 @@ function changeDate(){
         dateObject.textContent = "It's Saturday";
     }
 }
-changeTime();
+changeTime(changeDate);
 changeDate();
 
 
