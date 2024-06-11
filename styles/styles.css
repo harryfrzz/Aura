@@ -18,9 +18,9 @@ body::-webkit-scrollbar{
     border-radius: 30px;
     background-color: rgb(176, 127, 255);
 }
-#linkObject{
+.linkObject{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     background-color: blue;
     border-radius: 20px;
     width: 200px;
@@ -30,6 +30,7 @@ body::-webkit-scrollbar{
 }
 #link{
     margin-top: 20px;
+    margin-left: 10px;
     text-decoration: none;
     color: aliceblue;
 }
@@ -77,6 +78,14 @@ body::-webkit-scrollbar{
 }
 #tasks{
     margin-top: 2px;
+}
+.delete-button{
+    display: none;
+    margin-top: 18px;
+    margin-right: 10px;
+}
+.linkObject:hover .delete-button{
+    display: flex;
 }
 
 

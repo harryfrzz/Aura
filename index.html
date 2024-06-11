@@ -21,10 +21,36 @@
     <div id="link-area">
         <div id="linksBox">
             <div id="linkHolder">
-                <div id="linkObject">
+                <div class="linkObject">
                     <a id="link">Add link Using +</a> 
-                   </div>
+                    <img onclick="removeLink(this)" id="delete-button" src="icons/delete.png" class="delete-button" width="20" height="20">
+                </div>
             </div>
+            <script>
+                function removeLink(btn) {
+                    var buttonID = btn.id;
+                    //var keyarr = [];
+                    var keyArray = [];
+                    var linkArray = [];
+                    var arr = [];
+                    for (let i = 0; i < localStorage.length; i++) { 
+                        let values = localStorage.key(i);
+                        keyArray.push(values);
+                    }
+                    for (let j = 0; j < localStorage.length; j++) { 
+                        if(keyArray[j].startsWith("link-")){
+                            linkArray.push(keyArray[j]);
+                     }
+                    }
+                    linkArray.sort();
+                    for (let k = 0; k < linkArray.length; k++) {
+                        if(linkArray[k].slice(5) == buttonID.slice(7)){
+                            localStorage.removeItem(linkArray[k]);
+                        }  
+                    }
+                window.location.reload();
+            }
+            </script>
             <div id="myPopup" class="popup">
                 <div class="popup-content">
                     <h1 style="color: black">

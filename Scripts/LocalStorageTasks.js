@@ -28,15 +28,21 @@ unq = localStorage.getItem("unqValue");
 function main(){
   var htmlArray = [];
   var keyArray = [];
+  var arr = [];
     for (let i = 0; i < localStorage.length; i++) { 
       let values = localStorage.key(i);
       keyArray.push(values);
     }
-    keyArray.sort();
-    for (let j = 0; j < localStorage.length; j++){
-      var htmlObj = localStorage.getItem(keyArray[j]);
-      htmlArray.push(htmlObj);
-      taskPlaceholder.innerHTML = htmlArray.join('');
+    for(let j = 0; j < localStorage.length; j++){
+      if(keyArray[j].includes("-html")){
+        htmlArray.push(keyArray[j]);  
+      }
+    }
+    htmlArray.sort();
+    for (let k = 0; k < localStorage.length; k++){
+      var htmlObj = localStorage.getItem(htmlArray[k]);
+      arr.push(htmlObj);
+      taskPlaceholder.innerHTML = arr.join('');
     }
 }
 main();

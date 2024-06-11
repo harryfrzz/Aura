@@ -1,19 +1,21 @@
-var unq = 0;
+var lunq = 0;
 const linkObject = [];
 const linkBtn = document.getElementById("linkAddBtn");
 const linkPlaceHolder = document.getElementById("linkHolder");
 linkBtn.onclick = function(){
-    unq++;
-    localStorage.setItem("linkunqvalue",unq);
-    var linkKey = `link-${unq}`;
+    lunq++;
+    localStorage.setItem("linkunqvalue",lunq);
+    var linkKey = `link-${lunq}`;
+    var deleteButKey = `delete-${lunq}`;
     var linkInput = document.getElementById("linkSpace").value;
     var linkName = document.getElementById("linkName").value;
-    var obj = `<div id="linkObject">
+    var objlink = `<div id="${linkKey}" class="linkObject">
                 <a id="link" href="${linkInput}" style="color: aliceblue;">${linkName}</a> 
+                <img onclick="removeLink(this)" id="${deleteButKey}" class="delete-button" src="icons/delete.png" width="20" height="20">
                </div>`
-               linkObject.push(obj);
+    linkObject.push(objlink);
     linkPlaceHolder.innerHTML = linkObject.join(''); 
-    localStorage.setItem(linkKey,obj);
+    localStorage.setItem(linkKey,objlink);
 }
 unq = localStorage.getItem("linkunqvalue");
 function main(){
@@ -26,7 +28,6 @@ function main(){
     }
     for (let j = 0; j < localStorage.length; j++) { 
         if(keyArray[j].startsWith("link-")){
-            console.log(keyArray[j])
             linkArray.push(keyArray[j]);
             
         }
