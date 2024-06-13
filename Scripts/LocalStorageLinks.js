@@ -17,7 +17,7 @@ linkBtn.onclick = function(){
     linkPlaceHolder.innerHTML = linkObject.join(''); 
     localStorage.setItem(linkKey,objlink);
 }
-unq = localStorage.getItem("linkunqvalue");
+lunq = localStorage.getItem("linkunqvalue");
 function main(){
     var keyArray = [];
     var linkArray = [];
