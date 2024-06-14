@@ -15,7 +15,6 @@ function changeDate(){
     const d = new Date();
     const dateObject = document.getElementById("date");
     let day = d.getDay();
-
     if(day == 0){
         dateObject.textContent = "It's Sunday";
     }else if(day == 1){

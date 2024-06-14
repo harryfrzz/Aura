@@ -16,6 +16,7 @@ linkBtn.onclick = function(){
     linkObject.push(objlink);
     linkPlaceHolder.innerHTML = linkObject.join(''); 
     localStorage.setItem(linkKey,objlink);
+    document.getElementById("linkHolder").style.display = "flex";
 }
 lunq = localStorage.getItem("linkunqvalue");
 function main(){

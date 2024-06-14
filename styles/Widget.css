@@ -8,25 +8,46 @@
 #gridView{
     display: flex;
     flex-wrap: wrap;
-    margin-top: 350px;
     margin-bottom: 50px;
     padding: 20px;
     border-radius: 25px;
 }
 #item{
+    display: none;
     border-radius: 20px;
     overflow-y: scroll;
-    background: rgb(44, 44, 44);
+    /*background: rgb(44, 44, 44);*/
     height: 350px;
     width: 600px;
 }
 #item-1{
+    scale: 0.8;
     border-radius: 20px;
     overflow-y: scroll;
-    background: rgb(44, 44, 44);
-    height: 350px;
+     /*background: rgb(44, 44, 44);*/
+    background-color: rgba(68, 68, 68, 0.288);
+    backdrop-filter: blur(10px);
+    height: 150px;
     margin-left: 40px;
-    width: 350px;
+    width: 950px;
+}
+#appHolder{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-left: 40px;
+    margin-top: 30px;
+}
+#appItem{
+    width: 70px;
+    height: 70px;
+    padding: 10px;
+    background-color: rgba(124, 124, 124, 0.329);
+    border-radius: 20px;
+    transition: 0.1s ease;
+}
+#appItem:hover{
+    scale: 1.2;
 }
 #itemBar{
     display:flex; 
@@ -78,22 +99,4 @@
 .container{
     display: flex;
     justify-content: center;
-}
-#appHolder{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    margin-left: 70px;
-    margin-top: 40px;
-}
-#appItem{
-    width: 70px;
-    height: 70px;
-    padding: 10px;
-    background-color: rgba(124, 124, 124, 0.329);
-    border-radius: 20px;
-    transition: 0.1s ease;
-}
-#appItem:hover{
-    scale: 1.2;
 }
