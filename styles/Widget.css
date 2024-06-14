@@ -27,16 +27,14 @@
      /*background: rgb(44, 44, 44);*/
     background-color: rgba(68, 68, 68, 0.288);
     backdrop-filter: blur(10px);
-    height: 150px;
-    margin-left: 40px;
-    width: 950px;
+    height: fit-content;
+    width: fit-content;
+    padding: 12px;
 }
 #appHolder{
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    margin-left: 40px;
-    margin-top: 30px;
 }
 #appItem{
     width: 70px;

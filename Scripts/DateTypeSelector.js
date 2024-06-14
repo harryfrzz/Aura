@@ -7,9 +7,24 @@ const month = d.getMonth();
 
 const monthArray = ["January","February","March","April","May","June","July","August","September","October","November","December"];
 const dayArray = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+
 let monthWords = monthArray[month];
 let dayWords = dayArray[day];
 let dateFormat = `${dayWords}, ${monthWords} ${date}`;
+
+setInterval(changeTime,1000);
+function changeTime(){
+    const d = new Date();
+    const timeObject = document.getElementById("time");
+    let hour = d.getHours();
+    let minutes = d.getMinutes();
+    hour = hour < 10 ? "0" + hour : hour;
+    minutes = minutes < 10 ? "0" + minutes : minutes;
+    timeObject.textContent = `${hour}:${minutes}`;
+    if(hour == 0){
+        textDate();
+    }
+}
 
 function textDate() {
     let day = d.getDay();
@@ -64,3 +79,4 @@ window.addEventListener("load", () => {
     }
     updateDateDisplay();
 });
+changeTime();

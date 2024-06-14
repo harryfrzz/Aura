@@ -43,9 +43,9 @@
                     for (let k = 0; k < linkArray.length; k++) {
                         if(linkArray[k].slice(5) == buttonID.slice(7)){
                             localStorage.removeItem(linkArray[k]);
+                            document.getElementById(linkArray[k]).remove();
                         }  
-                    }
-                window.location.reload();
+                    }   
             }
             </script>
             <div id="myPopup" class="popup">
@@ -121,7 +121,7 @@
                                     localStorage.removeItem(keyarr[j]);
                                 }  
                             }
-                            window.location.reload();
+                            document.getElementById(buttonID).remove;
                         }
 
                         function dno(btn) {
@@ -159,7 +159,7 @@
         </div>
     </div>
     <footer>
-        <p id="attribution"></p>
+        <p id="attribution">Photo by Annie Spratt on Unsplash</p>
     </footer>
 
     <script src="Scripts/Fullscreen.js"></script>
