@@ -10,7 +10,7 @@ linkBtn.onclick = function(){
     var linkInput = document.getElementById("linkSpace").value;
     var linkName = document.getElementById("linkName").value;
     var objlink = `<div id="${linkKey}" class="linkObject">
-                <a id="link" href="${linkInput}" style="color: aliceblue;">${linkName}</a> 
+                <a id="link" href="${linkInput}" target="_blank" style="color: aliceblue;">${linkName}</a> 
                 <img onclick="removeLink(this)" id="${deleteButKey}" class="delete-button" src="icons/delete.png" width="20" height="20">
                </div>`
     linkObject.push(objlink);
@@ -28,8 +28,7 @@ function main(){
     }
     for (let j = 0; j < localStorage.length; j++) { 
         if(keyArray[j].startsWith("link-")){
-            linkArray.push(keyArray[j]);
-            
+            linkArray.push(keyArray[j]);  
         }
     }
     linkArray.sort();

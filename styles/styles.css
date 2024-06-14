@@ -8,6 +8,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-image: url("https://images.squarespace-cdn.com/content/v1/53c631e4e4b0c4d68989cbef/1410108841601-8DJHKTK2RL5Z3DCN1ZGI/DSC1276.jpg?format=2500w");
+    background-color: rgb(22, 22, 22);
     border-radius: 100px;
     height: 100vh;
     width: 100vw;
@@ -31,6 +32,12 @@ body {
     margin-top: -40px; 
     margin-left: 110px;
 }
+#greetingMessage{
+    color: white;
+    font-size: 2.5em;
+    margin-top: -40px; 
+    margin-left: 110px;
+}
 #link-area{
     display: flex;
     justify-content: center;
@@ -46,12 +53,14 @@ body {
     padding: 10px;
     gap: 20px;
     border-radius: 30px;
-    background-color: rgb(176, 127, 255);
+    backdrop-filter: blur(10px);
+    background-color: rgba(88, 88, 88, 0.377);
 }
 .linkObject{
     display: flex;
     justify-content: space-between;
-    background-color: blue;
+    background-color: rgba(95, 95, 95, 0.226);
+    backdrop-filter: blur(10px);
     border-radius: 20px;
     width: 200px;
     height: 60px;
@@ -63,6 +72,7 @@ body {
     margin-left: 10px;
     text-decoration: none;
     color: aliceblue;
+    font-weight: bold;
 }
 #addLink{
     margin-top: 2px;
@@ -87,7 +97,8 @@ body {
 #bottomBar{
     display: flex;
     justify-content: end;
-    background-color: rgb(136, 127, 255);
+    background-color: rgba(88, 88, 88, 0.295);
+    backdrop-filter: blur(10px);
     width: fit-content;
     height: fit-content;
     padding: 10px;

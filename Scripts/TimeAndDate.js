@@ -32,7 +32,19 @@ function changeDate(){
         dateObject.textContent = "It's Saturday";
     }
 }
+function greetingMessage(){
+    const d = new Date();
+    let hour = d.getHours();
+    const greetingMessage = document.getElementById("greetingMessage");
+    if(hour < 12){
+        greetingMessage.textContent = "Good morning!";
+    }else{
+        greetingMessage.textContent = "Good evening!";
+    }
+
+}
 changeTime();
 changeDate();
+greetingMessage();
 
 

@@ -18,7 +18,7 @@ submit.onclick = function(){
                 <button type="submit" id="${deleteButKey}" name="delete" onclick="rmv(this)" >Del</button>        
              </div>`
   htmlObject.push(obj);
-  taskPlaceholder.innerHTML = htmlObject.join(''); 
+  taskPlaceholder.innerHTML += htmlObject.join(''); 
   localStorage.setItem(htmlKey,obj);
   window.location.reload()
 }

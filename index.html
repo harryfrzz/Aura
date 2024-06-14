@@ -16,6 +16,7 @@
         <div id="griditem">
             <h1 id="time">00:00</h1>
             <h2 id="date">It's Wednesday</h2>
+            <h2 id="greetingMessage">Good morning!</h2>
         </div>
     </div>
     <div id="link-area">
@@ -63,17 +64,21 @@
                     <h1 style="color: black">Settings</h1>
                     <h2>Clock Customisation</h2>
                     <!--Font 1-->
-                    <input type="radio" id="clockstyle-1" name="font">
-                    <label>Font 1</label>
+                    <label>
+                    <input type="radio" id="clockstyle-1" name="font" value="Arial">Font 1</label>
+                    
                     <!--Font 2-->
-                    <input type="radio" id="clockstyle-2" name="font">
-                    <label>Font 2</label>
+                    <label>
+                    <input type="radio" id="clockstyle-2" name="font" value="Courier New">Font 2</label>
+                    
                     <!--Font 3-->
-                    <input type="radio" id="clockstyle-3" name="font">
-                    <label>Font 3</label>
+                    <label>
+                    <input type="radio" id="clockstyle-3" name="font" value="Georgia">Font 3</label>
+                    
                     <!--Font 4-->
-                    <input type="radio" id="clockstyle-4" name="font">
-                    <label>Font 4</label>
+                    <label>
+                    <input type="radio" id="clockstyle-4" name="font" value="Times New Roman">Font 4</label>
+                    
                     <button id="closePopupSet" onclick="closeSettings()">Close</button>
                     <h4 style="text-align: center;">Created With ❤️ By Harryfrz</h4>
                 </div>
@@ -91,8 +96,8 @@
                 </div>
                 <div id="taskObject">
                     <input placeholder="Enter Task" type="text" id="task">
-                    <button type="submit" id="submitBut">Submit</button>
-                    <button type="submit" onclick="rmv(this)" id="delete-default">Submit</button>
+                    <button type="submit" id="submitBut">Add Task</button>
+                    <button type="submit" onclick="rmv(this)" id="delete-default">delete</button>
                     <script>
                         function rmv(btn) {
                             var buttonID = btn.id;
@@ -161,5 +166,6 @@
     <script src="Scripts/LocalStorageLinks.js"></script>
     <script src="Scripts/TimeAndDate.js"></script>
     <script src="Scripts/AddLinkPopUp.js"></script>
+    <script src="Scripts/FontSelector.js"></script>
 </body>
 </html>
