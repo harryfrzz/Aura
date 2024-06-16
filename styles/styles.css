@@ -127,9 +127,14 @@ body {
     font-weight: bold;
 }
 #addLink{
+    color: black;
+    font-family: "Open Sans";
+    font-weight: 400;
     margin-top: 2px;
-    background-color: blueviolet;
-    border-radius: 100%;
+    padding: 10px;
+    background-color: rgb(255, 208, 182);
+    border-radius: 10px;
+    border: none;
 }
 
 
@@ -162,20 +167,12 @@ body {
     border-radius: 20px;
 }
 #fullscreen{
-    margin-top: 2px;
+    margin-top: 5px;
     margin-right: 5px;
 }
 #settings{
-    margin-top: 2px;
-    margin-left: 5px;
+    margin-top: 5px;
 }
-#tasks{
-    margin-top: 2px;
-}
-#widgetDown{
-    margin-top: 2px;
-}
-
 .delete-button{
     display: none;
     margin-top: 18px;

@@ -31,12 +31,16 @@
     display: block;
 }
 #linkSpace{
+    font-family: "Open Sans";
+    padding: 5px;
     width: 300px;
     height: 20px;
     margin-left: 20px;
     margin-top: 25px
 }
 #linkName{
+    font-family: "Open Sans";
+    padding: 5px;
     width: 300px;
     height: 20px;
     margin-left: 20px;
@@ -46,13 +50,24 @@
     width: fit-content;
     height: fit-content;
     margin-top: 20px;
-    padding: 10px;
+    font-family: "quicksand";
+    font-weight: 600;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(255, 208, 182);
+
 }
 #closePopup{
     width: fit-content;
     height: fit-content;
     margin-top: 20px;
-    padding: 10px;
+    font-family: "quicksand";
+    font-weight: 600;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(255, 208, 182);
 }
 
 
@@ -76,9 +91,23 @@
     height: 100%;
     font-weight: bolder;
 }
-.popupSettings-content button {
-    display: block;
-    margin: 0 auto;
+.popupSettings-content h2{
+    font-family: "quicksand";
+}
+.popupSettings-content input{
+    margin-bottom: 20px;
+}
+.popupSettings-content label{
+    font-family: "quicksand";
+    font-weight: 400;
+}
+#closePopupSet{
+    font-family: "quicksand";
+    font-weight: 600;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(255, 208, 182);
 }
 .showSettings {
     display: block;
@@ -88,7 +117,7 @@
     bottom: 100px;
 }
 #devname{
-    text-align: center; 
+    font-family: "Open Sans";
     position: absolute; 
     bottom: 40px;
 }

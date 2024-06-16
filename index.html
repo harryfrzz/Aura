@@ -8,7 +8,7 @@
 <body>
     <div id="bottomBar">
         <!--<a href="#linksBox"><img id="widgetDown" src="icons/arrow-down.png" width="35" height="35"></a>-->
-        <img id="addLink" src="icons/add.png" width="30" height="30">
+        <button id="addLink" src="icons/add.png" width="30" height="30">Add Link</button>
         <img id="settings" onclick="openSettings()" src="icons/settings.png" width="30" height="30">
         <img id="fullscreen" onclick="fullScreen()" src="icons/fullscreen.png" width="30" height="30">
     </div>
@@ -48,9 +48,9 @@
                     }   
             }
             </script>
-            <div id="myPopup" class="popup">
+            <div id="linkPopup" class="popup">
                 <div class="popup-content">
-                    <h1 style="color: black">
+                    <h1 style="color: black; font-family: 'Open Sans'; font-weight: 400;">
                         Add links</h1>
                     <input type="text" placeholder="Enter Name" id="linkName">
                     <input type="text" placeholder="Link Address" id="linkSpace">
@@ -60,30 +60,30 @@
             </div>
             <div id="settingsPopup" class="popupSettings">
                 <div class="popupSettings-content">
-                    <h1 style="color: black">Settings</h1>
+                    <h1 style="color: black; font-family: 'Open Sans';">Settings</h1>
                     <h2>Clock Customisation</h2>
                     <!--Font 1-->
-                    <label>
-                    <input type="radio" id="clockstyle-1" name="font" value="Quicksand">Font 1</label>
+                    <label style="font-family: 'quicksand';">
+                    <input type="radio" id="clockstyle-1" name="font" value="Quicksand">Quicksand</label>
                     
                     <!--Font 2-->
-                    <label>
-                    <input type="radio" id="clockstyle-2" name="font" value="Cactus Classical Serif">Font 2</label>
+                    <label style="font-family: 'Cactus Classical Serif';">
+                    <input type="radio" id="clockstyle-2" name="font" value="Cactus Classical Serif">Cactus Classical Serif</label>
                     
                     <!--Font 3-->
-                    <label>
-                    <input type="radio" id="clockstyle-3" name="font" value="Open Sans" checked>Font 3</label>
+                    <label style="font-family: 'Open Sans';">
+                    <input type="radio" id="clockstyle-3" name="font" value="Open Sans" checked>Open Sans</label>
                     
                     <!--Font 4-->
-                    <label>
-                    <input type="radio" id="clockstyle-4" name="font" value="Roboto Mono">Font 4</label>
+                    <label style="font-family: 'Roboto Mono';">
+                    <input type="radio" id="clockstyle-4" name="font" value="Roboto Mono">Roboto Mono</label>
 
-                    <label>
-                        <input type="radio" id="clockstyle-4" name="font" value="Oswald">Font 5</label>
-                    <label>
-                        <input type="radio" id="clockstyle-4" name="font" value="Raleway">Font 6</label>
+                    <label style="font-family: 'Oswald';">
+                        <input type="radio" id="clockstyle-4" name="font" value="Oswald">Oswald</label>
+                    <label style="font-family: 'Raleway';">
+                        <input type="radio" id="clockstyle-4" name="font" value="Raleway">Raleway</label>
                     
-                    <h2>Date type</h2>
+                    <h2>Date Format</h2>
                     <label>
                         <input type="radio" name="dtype" value="formatted">
                         Formatted Date
@@ -127,7 +127,6 @@
     <script src="Scripts/DateTypeSelector.js"></script>
     <script src="Scripts/Settings.js"></script>
     <script src="Scripts/LocalStorageLinks.js"></script>
-    <script src="Scripts/TimeAndDate.js"></script>
     <script src="Scripts/AddLinkPopUp.js"></script>
     <script src="Scripts/FontSelector.js"></script>
 </body>

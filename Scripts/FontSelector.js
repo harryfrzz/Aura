@@ -18,7 +18,6 @@ function loadFont(){
         });
     }
 }
-
 fontSelector.forEach(element => {
     element.addEventListener('change', (event) => {
         const selectedFont = event.target.value;

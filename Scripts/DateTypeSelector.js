@@ -1,5 +1,6 @@
 const dateHeading = document.getElementById("date");
 const dateSelector = document.querySelectorAll("input[name='dtype']");
+const dateObject = document.getElementById("date");
 const d = new Date();
 const date = d.getDate();
 const day = d.getDay();
@@ -32,24 +33,31 @@ function textDate() {
     switch(day) {
         case 0:
             dateText = "It's Sunday";
+            dateObject.textContent = dateText;
             break;
         case 1:
             dateText = "It's Monday";
+            dateObject.textContent = dateText;
             break;
         case 2:
             dateText = "It's Tuesday";
+            dateObject.textContent = dateText;
             break;
         case 3:
             dateText = "It's Wednesday";
+            dateObject.textContent = dateText;
             break;
         case 4:
             dateText = "It's Thursday";
+            dateObject.textContent = dateText;
             break;
         case 5:
             dateText = "It's Friday";
+            dateObject.textContent = dateText;
             break;
         case 6:
             dateText = "It's Saturday";
+            dateObject.textContent = dateText;
             break;
     }
     return dateText;
@@ -79,4 +87,17 @@ window.addEventListener("load", () => {
     }
     updateDateDisplay();
 });
+
+function greetingMessage(){
+    const d = new Date();
+    let hour = d.getHours();
+    const greetingMessage = document.getElementById("greetingMessage");
+    if(hour < 12){
+        greetingMessage.textContent = "Good morning!";
+    }else{
+        greetingMessage.textContent = "Good evening!";
+    }
+
+}
+greetingMessage();
 changeTime();
