@@ -9,8 +9,8 @@
     <div id="bottomBar">
         <!--<a href="#linksBox"><img id="widgetDown" src="icons/arrow-down.png" width="35" height="35"></a>-->
         <button id="addLink" src="icons/add.png" width="30" height="30">Add Link</button>
-        <img id="settings" onclick="openSettings()" src="icons/settings.png" width="30" height="30">
-        <img id="fullscreen" onclick="fullScreen()" src="icons/fullscreen.png" width="30" height="30">
+        <img id="settings" src="icons/settings.png" width="30" height="30">
+        <img id="fullscreen" src="icons/fullscreen.png" width="30" height="30">
     </div>
     <div id="grid">
         <div id="griditem">
@@ -23,31 +23,6 @@
         <div id="linksBox">
             <div id="linkHolder">
             </div>
-            <script>
-                function removeLink(btn) {
-                    var buttonID = btn.id;
-                    //var keyarr = [];
-                    var keyArray = [];
-                    var linkArray = [];
-                    var arr = [];
-                    for (let i = 0; i < localStorage.length; i++) { 
-                        let values = localStorage.key(i);
-                        keyArray.push(values);
-                    }
-                    for (let j = 0; j < localStorage.length; j++) { 
-                        if(keyArray[j].startsWith("link-")){
-                            linkArray.push(keyArray[j]);
-                     }
-                    }
-                    linkArray.sort();
-                    for (let k = 0; k < linkArray.length; k++) {
-                        if(linkArray[k].slice(5) == buttonID.slice(7)){
-                            localStorage.removeItem(linkArray[k]);
-                            document.getElementById(linkArray[k]).remove();
-                        }  
-                    }   
-            }
-            </script>
             <div id="linkPopup" class="popup">
                 <div class="popup-content">
                     <h1 style="color: black; font-family: 'Open Sans'; font-weight: 400;">
@@ -63,44 +38,46 @@
                     <h1 style="color: black; font-family: 'Open Sans';">Settings</h1>
                     <h2>Clock Customisation</h2>
                     <!--Font 1-->
-                    <label style="font-family: 'quicksand';">
+                    <label style="font-family: 'quicksand'; font-size: 1.2em;">
                     <input type="radio" id="clockstyle-1" name="font" value="Quicksand">Quicksand</label>
                     
                     <!--Font 2-->
-                    <label style="font-family: 'Cactus Classical Serif';">
+                    <label style="font-family: 'Cactus Classical Serif'; font-size: 1.2em;">
                     <input type="radio" id="clockstyle-2" name="font" value="Cactus Classical Serif">Cactus Classical Serif</label>
                     
                     <!--Font 3-->
-                    <label style="font-family: 'Open Sans';">
+                    <label style="font-family: 'Open Sans'; font-size: 1.2em;">
                     <input type="radio" id="clockstyle-3" name="font" value="Open Sans" checked>Open Sans</label>
                     
                     <!--Font 4-->
-                    <label style="font-family: 'Roboto Mono';">
+                    <label style="font-family: 'Roboto Mono'; font-size: 1.2em;">
                     <input type="radio" id="clockstyle-4" name="font" value="Roboto Mono">Roboto Mono</label>
 
-                    <label style="font-family: 'Oswald';">
+                    <label style="font-family: 'Oswald'; font-size: 1.2em;">
                         <input type="radio" id="clockstyle-4" name="font" value="Oswald">Oswald</label>
-                    <label style="font-family: 'Raleway';">
+                    <label style="font-family: 'Raleway'; font-size: 1.2em;">
                         <input type="radio" id="clockstyle-4" name="font" value="Raleway">Raleway</label>
                     
                     <h2>Date Format</h2>
-                    <label>
+                    <label style="font-size: 1.2em;">
                         <input type="radio" name="dtype" value="formatted">
                         Formatted Date
                     </label>
-                    <label>
+                    <label style="font-size: 1.2em;">
                         <input type="radio" name="dtype" value="text" checked>
                         Text Date
                     </label>
                     <button id="closePopupSet" onclick="closeSettings()">Close</button>
-                    
-                    <h4 id="devname">Created With ❤️ By Harryfrz</h4>
+                    <div id="bottominfo">
+                        <h4 id="devname">Created With ❤️ By Harryfrz</h4>
+                        <a><img id="social-github" src="icons/github-mark.png" width="28" height="28"></a>
+                        <button id="buymecoffee" type="submit">Donate me a coffee</button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>  
 
-    <!-- HTML Code for Task management -->
 
     <div class="container">
         <div id="gridView">

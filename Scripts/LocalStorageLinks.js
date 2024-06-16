@@ -11,7 +11,7 @@ linkBtn.onclick = function(){
     var linkName = document.getElementById("linkName").value;
     var objlink = `<div id="${linkKey}" class="linkObject">
                 <a id="link" href="${linkInput}" target="_blank" style="color: aliceblue;">${linkName}</a> 
-                <img onclick="removeLink(this)" id="${deleteButKey}" class="delete-button" src="icons/delete.png" width="20" height="20">
+                <img id="${deleteButKey}" class="delete-button" src="icons/delete.png" width="20" height="20">
                </div>`
     linkObject.push(objlink);
     linkPlaceHolder.innerHTML = linkObject.join(''); 
@@ -40,4 +40,42 @@ function main(){
       }
     
 }
+
+
+document.addEventListener('click', function () {
+    var buttons = document.querySelectorAll('.delete-button');
+    buttons.forEach(function (button) {
+        button.addEventListener('click', function () {
+            removeLink(button);
+        });
+    });
+});
+
+function removeLink(btn) {
+    var buttonID = btn.id;
+    console.log(buttonID);
+    var keyArray = [];
+    var linkArray = [];
+    for (let i = 0; i < localStorage.length; i++) {
+        let values = localStorage.key(i);
+        keyArray.push(values);
+    }
+    for (let j = 0; j < localStorage.length; j++) {
+        if (keyArray[j].startsWith("link-")) {
+            linkArray.push(keyArray[j]);
+        }
+    }
+    linkArray.sort();
+    for (let k = 0; k < linkArray.length; k++) {
+        if (linkArray[k].slice(5) == buttonID.slice(7)) {
+            localStorage.removeItem(linkArray[k]);
+            var element = document.getElementById(linkArray[k]);
+            if (element) {
+                element.remove();
+            }
+        }
+    }
+}
+
 main();
+
