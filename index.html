@@ -64,19 +64,24 @@
                     <h2>Clock Customisation</h2>
                     <!--Font 1-->
                     <label>
-                    <input type="radio" id="clockstyle-1" name="font" value="Arial">Font 1</label>
+                    <input type="radio" id="clockstyle-1" name="font" value="Quicksand">Font 1</label>
                     
                     <!--Font 2-->
                     <label>
-                    <input type="radio" id="clockstyle-2" name="font" value="Courier New">Font 2</label>
+                    <input type="radio" id="clockstyle-2" name="font" value="Cactus Classical Serif">Font 2</label>
                     
                     <!--Font 3-->
                     <label>
-                    <input type="radio" id="clockstyle-3" name="font" value="Georgia">Font 3</label>
+                    <input type="radio" id="clockstyle-3" name="font" value="Open Sans" checked>Font 3</label>
                     
                     <!--Font 4-->
                     <label>
-                    <input type="radio" id="clockstyle-4" name="font" value="Times New Roman">Font 4</label>
+                    <input type="radio" id="clockstyle-4" name="font" value="Roboto Mono">Font 4</label>
+
+                    <label>
+                        <input type="radio" id="clockstyle-4" name="font" value="Oswald">Font 5</label>
+                    <label>
+                        <input type="radio" id="clockstyle-4" name="font" value="Raleway">Font 6</label>
                     
                     <h2>Date type</h2>
                     <label>
@@ -89,7 +94,7 @@
                     </label>
                     <button id="closePopupSet" onclick="closeSettings()">Close</button>
                     
-                    <h4 style="text-align: center;">Created With ❤️ By Harryfrz</h4>
+                    <h4 id="devname">Created With ❤️ By Harryfrz</h4>
                 </div>
             </div>
         </div>
@@ -99,51 +104,6 @@
 
     <div class="container">
         <div id="gridView">
-            <div id="item">
-                <div id="itemBar">
-                    <h1 id="headingNT">Tasks</h1>
-                </div>
-                <div id="taskObject">
-                    <input placeholder="Enter Task" type="text" id="task">
-                    <button type="submit" id="submitBut">Add Task</button>
-                    <button type="submit" onclick="rmv(this)" id="delete-default">delete</button>
-                    <script>
-                        function rmv(btn) {
-                            var buttonID = btn.id;
-                            var keyarr = [];
-                            for (let i = 0; i < localStorage.length; i++) { 
-                                let values = localStorage.key(i);
-                                keyarr.push(values);
-                            }
-                            keyarr.sort();
-                            for (let j = 0; j < localStorage.length; j++) {
-                                if(keyarr[j].slice(0,-5) == buttonID.slice(0,-7)){
-                                    localStorage.removeItem(keyarr[j]);
-                                }  
-                            }
-                            document.getElementById(buttonID).remove;
-                        }
-
-                        function dno(btn) {
-                            var buttonID = btn.id;
-                            var keyarr = [];
-                            document.getElementById(buttonID).style.background = "green";
-                            for (let i = 0; i < localStorage.length; i++) { 
-                                let values = localStorage.key(i);
-                                keyarr.push(values);
-                            }
-                            keyarr.sort();
-                            for (let j = 0; j < localStorage.length; j++) {
-                                if(keyarr[j].slice(0,-5) == buttonID.slice(0,-7)){
-                                    localStorage.removeItem(keyarr[j]);
-                                }  
-                            }
-                            window.location.reload();
-                        }
-                    </script>
-                </div>
-                <div id="objectHolder"></div>
-            </div>
             <div id="item-1">
                 <div id="appHolder">
                     <a href="https://open.spotify.com/" target="_blank"><img id="appItem" src="icons/spotify.png"></a>
@@ -166,7 +126,6 @@
     <!--<script src="Scripts/UnsplashBg.js"></script>-->
     <script src="Scripts/DateTypeSelector.js"></script>
     <script src="Scripts/Settings.js"></script>
-    <script src="Scripts/LocalStorageTasks.js"></script>
     <script src="Scripts/LocalStorageLinks.js"></script>
     <script src="Scripts/TimeAndDate.js"></script>
     <script src="Scripts/AddLinkPopUp.js"></script>

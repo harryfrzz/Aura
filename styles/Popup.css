@@ -68,11 +68,12 @@
     position: fixed;
     top: 0;
     right: 0;
-    display: block;
+    display: flex;
+    flex-direction: column;
     background-color: white;
     padding: 20px;
     width: 20%;
-    height: 50%;
+    height: 100%;
     font-weight: bolder;
 }
 .popupSettings-content button {
@@ -81,4 +82,13 @@
 }
 .showSettings {
     display: block;
+}
+#closePopupSet{
+    position: absolute;
+    bottom: 100px;
+}
+#devname{
+    text-align: center; 
+    position: absolute; 
+    bottom: 40px;
 }

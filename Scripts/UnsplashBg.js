@@ -34,7 +34,7 @@ async function setBackground() {
         document.body.style.backgroundImage = `url(${imageUrl})`;
 
         const attributionElement = document.getElementById('attribution');
-        attributionElement.innerHTML = `Photo by <a href="${photographerLink}" target="_blank">${photographerName}</a> on <a href="https://unsplash.com" target="_blank">Unsplash</a>`;
+        attributionElement.innerHTML = `Photo by <a style="color:white;" href="${photographerLink}" target="_blank">${photographerName}</a> on <a style="color:white;" href="https://unsplash.com" target="_blank">Unsplash</a>`;
     } catch (error) {
         console.error('Error fetching background image:', error);
     }

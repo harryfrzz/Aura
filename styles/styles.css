@@ -1,3 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cactus+Classical+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+.quicksand {
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
+
+  .open-sans {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+  }
+
+  .cactus-classical-serif-regular {
+    font-family: "Cactus Classical Serif", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .roboto-mono {
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
+  .oswald{
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
+  .raleway {
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
+  
+  
 body::-webkit-scrollbar{
     display: none;
 }
@@ -26,18 +66,23 @@ body {
     height: 100vh;
 }
 #time{
+    font-family: "Open Sans";
     color: white;
     margin-top: 300px; 
     margin-left: 100px; 
     font-size: 7em;
 }
 #date{
+    font-family: "Open Sans";
+    font-weight: 300;
     color: white;
     font-size: 3em;
     margin-top: -65px; 
     margin-left: 110px;
 }
 #greetingMessage{
+    font-family: "Quicksand";
+    font-weight: 400;
     color: white;
     font-size: 3em;
     margin-top: -40px; 
@@ -144,6 +189,9 @@ body {
     margin-top: 80px;
 }
 #attribution{
+    font-family: "quicksand";
+    font-weight: 200;
+    font-size: 0.9em;
     position: absolute;
     bottom: 0;
     margin-left: 20px;
