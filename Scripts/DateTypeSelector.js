@@ -1,6 +1,7 @@
 const dateHeading = document.getElementById("date");
+const timeplaceholder = document.getElementById("time");
 const dateSelector = document.querySelectorAll("input[name='dtype']");
-const dateObject = document.getElementById("date");
+const timeSelector = document.querySelectorAll("input[name='ttype']");
 const d = new Date();
 const date = d.getDate();
 const day = d.getDay();
@@ -16,15 +17,34 @@ let dateFormat = `${dayWords}, ${monthWords} ${date}`;
 setInterval(changeTime,1000);
 function changeTime(){
     const d = new Date();
-    const timeObject = document.getElementById("time");
+    var timeObject;
     let hour = d.getHours();
     let minutes = d.getMinutes();
     hour = hour < 10 ? "0" + hour : hour;
     minutes = minutes < 10 ? "0" + minutes : minutes;
-    timeObject.textContent = `${hour}:${minutes}`;
+    timeObject = `${hour}:${minutes}`;
     if(hour == 0){
         textDate();
     }
+    return timeObject;
+}
+
+
+function twelveHour(){
+    var time;
+    const d = new Date();
+    var hour = d.getHours();
+    var minutes = d.getMinutes();
+    hour = hour % 12;
+    hour = hour < 10 ? "0" + hour : hour;
+    minutes = minutes < 10 ? "0" + minutes : minutes;
+    if(hour < 12){
+        time = `${hour}:${minutes} AM`;
+    }else if(hour > 12){
+        time = `${hour}:${minutes} PM`;
+    }
+    
+    return time;
 }
 
 function textDate() {
@@ -33,35 +53,50 @@ function textDate() {
     switch(day) {
         case 0:
             dateText = "It's Sunday";
-            dateObject.textContent = dateText;
             break;
         case 1:
             dateText = "It's Monday";
-            dateObject.textContent = dateText;
+
             break;
         case 2:
             dateText = "It's Tuesday";
-            dateObject.textContent = dateText;
             break;
         case 3:
             dateText = "It's Wednesday";
-            dateObject.textContent = dateText;
             break;
         case 4:
             dateText = "It's Thursday";
-            dateObject.textContent = dateText;
             break;
         case 5:
             dateText = "It's Friday";
-            dateObject.textContent = dateText;
             break;
         case 6:
             dateText = "It's Saturday";
-            dateObject.textContent = dateText;
             break;
     }
     return dateText;
 }
+
+function updateTimeFormat(){
+    const selectedTimeFormat = document.querySelector("input[name='ttype']:checked").value;
+    if(selectedTimeFormat === "24hr"){
+        timeplaceholder.textContent = changeTime();
+    }else if(selectedTimeFormat === "12hr"){
+        timeplaceholder.textContent = twelveHour();
+    }
+    localStorage.setItem("selectedTimeFormat", selectedTimeFormat);
+}
+timeSelector.forEach(radio => {
+    radio.addEventListener("change", updateTimeFormat);
+});
+window.addEventListener("load", () => {
+    const savedTimeFormat = localStorage.getItem("selectedTimeFormat");
+    if (savedTimeFormat) {
+        document.querySelector(`input[name='ttype'][value='${savedTimeFormat}']`).checked = true;
+    }
+    updateTimeFormat();
+});
+
 
 function updateDateDisplay() {
     const selectedFormat = document.querySelector("input[name='dtype']:checked").value;
@@ -70,16 +105,11 @@ function updateDateDisplay() {
     } else if (selectedFormat === "text") {
         dateHeading.textContent = textDate();
     }
-    // Store the selected format in local storage
     localStorage.setItem("selectedDateFormat", selectedFormat);
 }
-
-// Add event listeners to radio buttons
 dateSelector.forEach(radio => {
     radio.addEventListener("change", updateDateDisplay);
 });
-
-// Load the saved format from local storage
 window.addEventListener("load", () => {
     const savedFormat = localStorage.getItem("selectedDateFormat");
     if (savedFormat) {
@@ -101,3 +131,4 @@ function greetingMessage(){
 }
 greetingMessage();
 changeTime();
+timeplaceholder.textContent = changeTime();

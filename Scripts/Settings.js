@@ -1,14 +1,10 @@
 const settingsBut = document.getElementById("settings");
 const closeBut = document.getElementById("closePopupSet");
-settingsBut.addEventListener(
-    "click",
-    function () {
+settingsBut.addEventListener("click",function () {
         settingsPopup.classList.add("showSettings");
     }
 );
-closeBut.addEventListener(
-    "click",
-    function () {
+closeBut.addEventListener("click",function () {
         settingsPopup.classList.remove("showSettings");
     }
 );

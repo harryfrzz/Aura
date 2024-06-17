@@ -1,3 +1,4 @@
+/*Link Addtion Popup*/
 .popup {
     position: fixed;
     z-index: 1;
@@ -66,8 +67,7 @@
     background-color: rgb(255, 208, 182);
 }
 
-
-
+/*Settings Popup*/
 
 .popupSettings {
     z-index: 1;
@@ -100,26 +100,21 @@
 }
 #closePopupSet{
     font-family: "quicksand";
-    width: 390px;
+    width: 385px;
     font-weight: 600;
     padding: 12px;
     border-radius: 10px;
     border: none;
     background-color: rgb(255, 208, 182);
     position: absolute;
-    bottom: 140px;
+    bottom: 100px;
 }
 .showSettings {
     display: block;
 }
 #bottominfo{
     display: block;
+    align-self: center;
     position: absolute;
     bottom: 45px;
-}
-#devname{
-    font-family: "Open Sans";
-}
-#buymecoffee{
-    padding: 5px;
 }

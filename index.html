@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/Widget.css">
     <link rel="stylesheet" href="styles/Popup.css">
 </head>
 <body>
     <div id="bottomBar">
-        <!--<a href="#linksBox"><img id="widgetDown" src="icons/arrow-down.png" width="35" height="35"></a>-->
         <button id="addLink" src="icons/add.png" width="30" height="30">Add Link</button>
         <img id="settings" src="icons/settings.png" width="30" height="30">
         <img id="fullscreen" src="icons/fullscreen.png" width="30" height="30">
@@ -26,7 +26,7 @@
             <div id="linkPopup" class="popup">
                 <div class="popup-content">
                     <h1 style="color: black; font-family: 'Open Sans'; font-weight: 400;">
-                        Add links</h1>
+                        Add link</h1>
                     <input type="text" placeholder="Enter Name" id="linkName">
                     <input type="text" placeholder="Link Address" id="linkSpace">
                     <button type="submit" id="linkAddBtn">Add</button>
@@ -35,7 +35,7 @@
             </div>
             <div id="settingsPopup" class="popupSettings">
                 <div class="popupSettings-content">
-                    <h1 style="color: black; font-family: 'Open Sans';">Settings</h1>
+                    <h1 style="color: black; font-family: 'Open Sans'; font-size: 2.5em;">Settings</h1>
                     <h2>Clock Customisation</h2>
                     <!--Font 1-->
                     <label style="font-family: 'quicksand'; font-size: 1.2em;">
@@ -67,17 +67,25 @@
                         <input type="radio" name="dtype" value="text" checked>
                         Text Date
                     </label>
-                    <button id="closePopupSet" onclick="closeSettings()">Close</button>
+
+                    <h2>Time Format</h2>
+
+                    <label style="font-size: 1.2em;">
+                        <input type="radio" name="ttype" value="24hr" checked>
+                        24-Hour Clock
+                    </label>
+                    <label style="font-size: 1.2em;">
+                        <input type="radio" name="ttype" value="12hr">
+                        12-Hour Clock
+                    </label>
+                    <button id="closePopupSet">Close</button>   
                     <div id="bottominfo">
-                        <h4 id="devname">Created With ❤️ By Harryfrz</h4>
-                        <a><img id="social-github" src="icons/github-mark.png" width="28" height="28"></a>
-                        <button id="buymecoffee" type="submit">Donate me a coffee</button>
+                        <a href="https://github.com/harryfrzz/Aura"><img id="social-github" src="icons/github-mark.png" width="35" height="35"></a>
                     </div>
                 </div>
             </div>
         </div>
     </div>  
-
 
     <div class="container">
         <div id="gridView">
@@ -90,7 +98,7 @@
                     <a href="https://mail.google.com/" target="_blank"><img id="appItem" src="icons/gmail.png"></a>
                     <a href="https://docs.google.com/" target="_blank"><img id="appItem" src="icons/googledocs.png"></a>
                     <a href="https://chat.openai.com/" target="_blank"><img id="appItem" src="icons/chatgpt.png"></a>
-                    <a href="https://github.com/" target="_blank"><img id="appItem" src="icons/github-mark.png"></a>
+                    <a href="https://github.com/" target="_blank"><img id="appItem" src="icons/github-mark-white.png"></a>
                 </div>
             </div>
         </div>

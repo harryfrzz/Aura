@@ -70,12 +70,9 @@ function removeLink(btn) {
         if (linkArray[k].slice(5) == buttonID.slice(7)) {
             localStorage.removeItem(linkArray[k]);
             var element = document.getElementById(linkArray[k]);
-            if (element) {
-                element.remove();
-            }
+            element.remove();  
         }
     }
 }
-
 main();
 
