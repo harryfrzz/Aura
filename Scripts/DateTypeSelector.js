@@ -1,21 +1,26 @@
-const dateHeading = document.getElementById("date");
-const timeplaceholder = document.getElementById("time");
-const dateSelector = document.querySelectorAll("input[name='dtype']");
-const timeSelector = document.querySelectorAll("input[name='ttype']");
+//Variables
+var time;
+var timeStore;
 const d = new Date();
 const date = d.getDate();
 const day = d.getDay();
 const month = d.getMonth();
+const dateHeading = document.getElementById("date");
+const timeplaceholder = document.getElementById("time");
+const dateSelector = document.querySelectorAll("input[name='dtype']");
+const timeSelector = document.querySelectorAll("input[name='ttype']");
 
+//Month and Day Array
 const monthArray = ["January","February","March","April","May","June","July","August","September","October","November","December"];
 const dayArray = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
 
+//Date in Normal format
 let monthWords = monthArray[month];
 let dayWords = dayArray[day];
 let dateFormat = `${dayWords}, ${monthWords} ${date}`;
 
-setInterval(changeTime,1000);
-function changeTime(){
+//24-Hour Clock Format
+function twentyFourHour(){
     const d = new Date();
     var timeObject;
     let hour = d.getHours();
@@ -29,24 +34,32 @@ function changeTime(){
     return timeObject;
 }
 
-
+//12-hour Clock Format
 function twelveHour(){
-    var time;
     const d = new Date();
-    var hour = d.getHours();
-    var minutes = d.getMinutes();
-    hour = hour % 12;
+    let hour = d.getHours();
+    let minutes = d.getMinutes();
+    let seconds = d.getSeconds();
     hour = hour < 10 ? "0" + hour : hour;
     minutes = minutes < 10 ? "0" + minutes : minutes;
-    if(hour < 12){
-        time = `${hour}:${minutes} AM`;
-    }else if(hour > 12){
-        time = `${hour}:${minutes} PM`;
+    if(hour == 0){
+        time =  `12:${minutes} AM`;
+    }else if(hour == 12){
+        time =  `12:${minutes} PM`;
+    }else if(hour < 12){
+        time = `${hour}:${minutes}:${seconds} AM`;
+    }else {
+        var t_hour = hour % 12;
+        if(t_hour < 10){
+            time = "0"+`${t_hour}:${minutes} PM`;
+        }else{
+            time =`${t_hour}:${minutes} PM`;
+        }
     }
-    
     return time;
 }
 
+//Date in Text Format
 function textDate() {
     let day = d.getDay();
     let dateText;
@@ -77,15 +90,21 @@ function textDate() {
     return dateText;
 }
 
+//Function to update the time format
 function updateTimeFormat(){
     const selectedTimeFormat = document.querySelector("input[name='ttype']:checked").value;
     if(selectedTimeFormat === "24hr"){
-        timeplaceholder.textContent = changeTime();
+        timeStore = twentyFourHour();
     }else if(selectedTimeFormat === "12hr"){
-        timeplaceholder.textContent = twelveHour();
+        timeStore = twelveHour();
     }
+    timeplaceholder.textContent = timeStore;
     localStorage.setItem("selectedTimeFormat", selectedTimeFormat);
 }
+setInterval(updateTimeFormat, 1000);
+
+
+//Radio button Selector for Time Format
 timeSelector.forEach(radio => {
     radio.addEventListener("change", updateTimeFormat);
 });
@@ -98,6 +117,7 @@ window.addEventListener("load", () => {
 });
 
 
+//Function to update the Date format
 function updateDateDisplay() {
     const selectedFormat = document.querySelector("input[name='dtype']:checked").value;
     if (selectedFormat === "formatted") {
@@ -107,6 +127,8 @@ function updateDateDisplay() {
     }
     localStorage.setItem("selectedDateFormat", selectedFormat);
 }
+
+//Radio Button selector for Date Format
 dateSelector.forEach(radio => {
     radio.addEventListener("change", updateDateDisplay);
 });
@@ -118,6 +140,7 @@ window.addEventListener("load", () => {
     updateDateDisplay();
 });
 
+//Function to Show the greeting message
 function greetingMessage(){
     const d = new Date();
     let hour = d.getHours();
@@ -127,8 +150,7 @@ function greetingMessage(){
     }else{
         greetingMessage.textContent = "Good evening!";
     }
-
 }
 greetingMessage();
-changeTime();
-timeplaceholder.textContent = changeTime();
+twentyFourHour();
+

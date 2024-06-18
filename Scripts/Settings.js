@@ -1,3 +1,4 @@
+//Code for Settings Popup
 const settingsBut = document.getElementById("settings");
 const closeBut = document.getElementById("closePopupSet");
 settingsBut.addEventListener("click",function () {

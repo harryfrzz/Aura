@@ -1,7 +1,10 @@
+//Variables
 var lunq = 0;
 const linkObject = [];
 const linkBtn = document.getElementById("linkAddBtn");
 const linkPlaceHolder = document.getElementById("linkHolder");
+
+//Onclick function for inserting the linkobject into the html and localstorage
 linkBtn.onclick = function(){
     lunq++;
     localStorage.setItem("linkunqvalue",lunq);
@@ -19,6 +22,9 @@ linkBtn.onclick = function(){
     document.getElementById("linkHolder").style.display = "flex";
 }
 lunq = localStorage.getItem("linkunqvalue");
+
+
+/*Function to retrive the value from the localStorage and display it in the HTML*/
 function main(){
     var keyArray = [];
     var linkArray = [];
@@ -40,8 +46,7 @@ function main(){
       }
     
 }
-
-
+//Code for retrieving the ID of the element of class .delete-button
 document.addEventListener('click', function () {
     var buttons = document.querySelectorAll('.delete-button');
     buttons.forEach(function (button) {
@@ -51,6 +56,7 @@ document.addEventListener('click', function () {
     });
 });
 
+//Function to remove the link object from the localstorage and HTML 
 function removeLink(btn) {
     var buttonID = btn.id;
     console.log(buttonID);
