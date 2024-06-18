@@ -1,18 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <!--Meta Tags-->
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <!--CSS Styling Files-->
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/Widget.css">
     <link rel="stylesheet" href="styles/Popup.css">
+    <link rel="icon" href="icons/title-bar-logo.png">
     <title>New Tab</title>
 </head>
 <body>
+    <!--Fixed Bottom Bar for buttons like fullscreen and add link-->
     <div id="bottomBar">
         <button id="addLink" src="icons/add.png" width="30" height="30">Add Link</button>
         <img id="settings" src="icons/settings.png" width="30" height="30">
         <img id="fullscreen" src="icons/fullscreen.png" width="30" height="30">
     </div>
+    <!--Grid Item for displaying time,date and greeting message-->
     <div id="grid">
         <div id="griditem">
             <h1 id="time">00:00</h1>
@@ -20,13 +25,16 @@
             <h2 id="greetingMessage">Good morning!</h2>
         </div>
     </div>
+    <!--This area is used for inserting the links that the user inputs-->
     <div id="link-area">
         <div id="linksBox">
+            <!--The links will be added into this Linkholder div dynamically through js script-->
             <div id="linkHolder">
             </div>
+            <!--Popup windows for adding custom links-->
             <div id="linkPopup" class="popup">
                 <div class="popup-content">
-                    <h1 style="color: black; font-family: 'Open Sans'; font-weight: 400;">
+                    <h1 style="color: white; font-family: 'Open Sans'; font-weight: 400;">
                         Add link</h1>
                     <input type="text" placeholder="Enter Name" id="linkName">
                     <input type="text" placeholder="Link Address" id="linkSpace">
@@ -34,31 +42,37 @@
                     <button id="closePopup">Close</button>
                 </div>
             </div>
+            <!--Popup windows for Settings window-->
             <div id="settingsPopup" class="popupSettings">
                 <div class="popupSettings-content">
-                    <h1 style="color: black; font-family: 'Open Sans'; font-size: 2.5em;">Settings</h1>
+                    <!--Aura logo-->
+                    <center>
+                        <img src="icons/Logo.png" height="250" width="250">
+                    </center>
+                    <h1 style="color: white; font-family: 'Open Sans'; font-size: 2.5em;">Settings</h1>
+
+                    <!--Clock customisation Part-->
                     <h2>Clock Customisation</h2>
                     <!--Font 1-->
                     <label style="font-family: 'quicksand'; font-size: 1.2em;">
                     <input type="radio" id="clockstyle-1" name="font" value="Quicksand">Quicksand</label>
-                    
                     <!--Font 2-->
                     <label style="font-family: 'Cactus Classical Serif'; font-size: 1.2em;">
                     <input type="radio" id="clockstyle-2" name="font" value="Cactus Classical Serif">Cactus Classical Serif</label>
-                    
                     <!--Font 3-->
                     <label style="font-family: 'Open Sans'; font-size: 1.2em;">
                     <input type="radio" id="clockstyle-3" name="font" value="Open Sans" checked>Open Sans</label>
-                    
                     <!--Font 4-->
-                    <label style="font-family: 'Roboto Mono'; font-size: 1.2em;">
-                    <input type="radio" id="clockstyle-4" name="font" value="Roboto Mono">Roboto Mono</label>
-
+                    <label style="font-family: 'Tiny5'; font-size: 1.2em;">
+                    <input type="radio" id="clockstyle-4" name="font" value="Tiny5">Tiny5</label>
+                    <!--Font 5-->
                     <label style="font-family: 'Oswald'; font-size: 1.2em;">
                         <input type="radio" id="clockstyle-4" name="font" value="Oswald">Oswald</label>
+                    <!--Font 6-->
                     <label style="font-family: 'Raleway'; font-size: 1.2em;">
                         <input type="radio" id="clockstyle-4" name="font" value="Raleway">Raleway</label>
-                    
+
+                    <!--Date Format Customisation-->
                     <h2>Date Format</h2>
                     <label style="font-size: 1.2em;">
                         <input type="radio" name="dtype" value="formatted">
@@ -69,8 +83,8 @@
                         Text Date
                     </label>
 
+                    <!--Time Format Customisation-->
                     <h2>Time Format</h2>
-
                     <label style="font-size: 1.2em;">
                         <input type="radio" name="ttype" value="24hr" checked>
                         24-Hour Clock
@@ -81,13 +95,14 @@
                     </label>
                     <button id="closePopupSet">Close</button>   
                     <div id="bottominfo">
-                        <a href="https://github.com/harryfrzz/Aura"><img id="social-github" src="icons/github-mark.png" width="35" height="35"></a>
+                        <a href="https://github.com/harryfrzz/Aura"><img id="social-github" src="icons/github-mark-white.png" width="35" height="35"></a>
                     </div>
                 </div>
             </div>
         </div>
     </div>  
 
+    <!--Link Dock-->
     <div class="container">
         <div id="gridView">
             <div id="quickLinks">
@@ -104,10 +119,13 @@
             </div>
         </div>
     </div>
+
+    <!--Author Attribution for unsplash-->
     <footer>
         <p id="attribution">Photo by Annie Spratt on Unsplash</p>
     </footer>
 
+    <!--JS Scripts-->
     <script src="Scripts/Fullscreen.js"></script>
     <!--<script src="Scripts/UnsplashBg.js"></script>-->
     <script src="Scripts/DateTypeSelector.js"></script>
