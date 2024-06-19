@@ -21,6 +21,7 @@ It uses local storage for storing data, like the custom links that users add to 
 * **And more !**
 
 ## NOTE :pushpin: 
-The public app currently uses unsplash image api to fetch images and show it as the background,but it’s not included in the open source version. So You can add whatever background as you like.
+* The public app currently uses unsplash image api to fetch images and show it as the background,but it’s not included in the open source version. So You can add whatever background as you like.
+* The chrome manifest file is also not included with the source code, you have to create a manifest file by your own when building this extension.
 ## Contributions :hearts:
 *Curruntly this project does not support any contribution,but will be allowed after some time.*
