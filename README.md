@@ -18,7 +18,7 @@ It uses local storage for storing data, like the custom links that users add to 
 * **Widgets integration** 
 * **Spotify api integration** 
 * **Date and Time placement changer**
-* **And more !**
+* **And more customisation options !**
 
 ## NOTE :pushpin: 
 * The public app currently uses unsplash image api to fetch images and show it as the background,but it’s not included in the open source version. So You can add whatever background as you like.
