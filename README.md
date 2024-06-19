@@ -24,3 +24,14 @@ It uses local storage for storing data, like the custom links that users add to 
 The public app currently uses unsplash image api to fetch images and show it as the background,but it’s not included in the open source version. So You can add whatever background as you like.
 ## Contributions :hearts:
 *Curruntly this project does not support any contribution,but will be allowed after some time.*
+
+Shield: [![CC BY-NC-SA 4.0][cc-by-nc-sa-shield]][cc-by-nc-sa]
+
+This work is licensed under a
+[Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License][cc-by-nc-sa].
+
+[![CC BY-NC-SA 4.0][cc-by-nc-sa-image]][cc-by-nc-sa]
+
+[cc-by-nc-sa]: http://creativecommons.org/licenses/by-nc-sa/4.0/
+[cc-by-nc-sa-image]: https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png
+[cc-by-nc-sa-shield]: https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg
