@@ -16,7 +16,7 @@
     background-color: rgb(3, 3, 3);
     margin: 20% auto;
     padding: 20px;
-    width: 50%;
+    width: 50vw;
     font-weight: bolder;
     border-radius: 20px;
 }
@@ -63,6 +63,7 @@
     font-weight: 600;
     padding: 12px;
     margin-left: 20px;
+    margin-right: 10px;
     border-radius: 10px;
     border: none;
     background-color: rgb(255, 208, 182);
@@ -97,8 +98,8 @@
     background-color: rgba(3, 3, 3, 0.233);
     backdrop-filter: blur(10px);
     padding: 20px;
-    width: 20%;
-    height: 100%;
+    width: 20vw;
+    height: 100vh;
     font-weight: bolder;
     overflow: scroll;
     
@@ -118,7 +119,7 @@
 }
 #closePopupSet{
     font-family: "quicksand";
-    width: 385px;
+    width: 20vw;
     font-weight: 600;
     padding: 12px;
     border-radius: 10px;
