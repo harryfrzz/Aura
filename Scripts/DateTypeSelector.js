@@ -6,9 +6,11 @@ const date = d.getDate();
 const day = d.getDay();
 const month = d.getMonth();
 const dateHeading = document.getElementById("date");
+const dtplacement = document.getElementById("info")
 const timeplaceholder = document.getElementById("time");
 const dateSelector = document.querySelectorAll("input[name='dtype']");
 const timeSelector = document.querySelectorAll("input[name='ttype']");
+const placementSelector = document.querySelectorAll("input[name='ptype']");
 
 //Month and Day Array
 const monthArray = ["January","February","March","April","May","June","July","August","September","October","November","December"];
@@ -88,6 +90,18 @@ function textDate() {
     }
     return dateText;
 }
+//Function to Show the greeting message
+function greetingMessage(){
+    const d = new Date();
+    let hour = d.getHours();
+    const greetingMessage = document.getElementById("greetingMessage");
+    if(hour < 12){
+        greetingMessage.textContent = "Good morning!";
+    }else{
+        greetingMessage.textContent = "Good evening!";
+    }
+}
+
 
 //Function to update the time format
 function updateTimeFormat(){
@@ -139,17 +153,30 @@ window.addEventListener("load", () => {
     updateDateDisplay();
 });
 
-//Function to Show the greeting message
-function greetingMessage(){
-    const d = new Date();
-    let hour = d.getHours();
-    const greetingMessage = document.getElementById("greetingMessage");
-    if(hour < 12){
-        greetingMessage.textContent = "Good morning!";
-    }else{
-        greetingMessage.textContent = "Good evening!";
+
+//Radio Button selector for Date & Time placement Format
+placementSelector.forEach(radio => {
+    radio.addEventListener("change", changePlacement);
+});
+function changePlacement(){
+    const selectedFormat = document.querySelector("input[name='ptype']:checked").value;
+    if (selectedFormat == "start") {
+        dtplacement.style.textAlign = "start";
+    } else if (selectedFormat == "end") {
+        dtplacement.style.textAlign = "end";
+    } else if(selectedFormat == "center"){
+        dtplacement.style.textAlign = "center";
     }
+    localStorage.setItem("selectedPlacementFormat", selectedFormat);
 }
+window.addEventListener("load", () => {
+    const savedFormat = localStorage.getItem("selectedPlacementFormat");
+    if (savedFormat) {
+        document.querySelector(`input[name='ptype'][value='${savedFormat}']`).checked = true;
+    }
+    changePlacement();
+});
+
 greetingMessage();
 twentyFourHour();
 
