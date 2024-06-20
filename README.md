@@ -17,7 +17,7 @@ It uses local storage for storing data, like the custom links that users add to 
 ### Features that will be implemented in the future :dart: :
 * **Widgets integration** 
 * **Spotify api integration** 
-* **Date and Time placement changer**
+* **Date and Time placement changer** (Added)
 * **And more customisation options !**
 
 ## NOTE :pushpin: 
