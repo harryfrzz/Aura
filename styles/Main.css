@@ -20,20 +20,24 @@ body{
     background-position: center;
     height: 100vh;
     font-size: 100%;
-    overflow: hidden;
+    overflow: hidden;   
     width: 100vw;
 }
 
 /*Main Grid View*/
 #info{
-    display: flex;
+    /*display: flex;
     flex-direction: column;
-    text-align: center;
-    margin: 10% 60px auto;
+    margin: 12% 50px auto;*/
+    width: max-content;
+    height: fit-content;
+    position: fixed;
+    top: 50%;
+    left: 85%;
+    transform: translate(-50%, -50%);
 }
 
 /*Time and Date*/
-
 #time{
     font-family: "Open Sans";
     color: white;

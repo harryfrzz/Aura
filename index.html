@@ -46,13 +46,13 @@
             <div id="settingsPopup" class="popupSettings">
                 <div class="popupSettings-content">
                     <!--Aura logo-->
+                    <img src="icons/close.png" width="30" height="30" id="closePopupSet">  
                     <center>
                         <img src="icons/Logo.png" height="250" width="250">
                     </center>
-                    <h1 style="color: white; font-family: 'Open Sans'; font-size: 2.5em;">Settings</h1>
 
                     <!--Clock customisation Part-->
-                    <h2>Clock Customisation</h2>
+                    <h2 id="settingsHeading">Clock Customisation</h2>
                     <!--Font 1-->
                     <label style="font-family: 'quicksand'; font-size: 1.2em;">
                     <input type="radio" id="clockstyle-1" name="font" value="Quicksand">Quicksand</label>
@@ -73,7 +73,7 @@
                         <input type="radio" id="clockstyle-4" name="font" value="Raleway">Raleway</label>
 
                     <!--Date Format Customisation-->
-                    <h2>Date Format</h2>
+                    <h2 id="settingsHeading">Date Format</h2>
                     <label style="font-size: 1.2em;">
                         <input type="radio" name="dtype" value="formatted">
                         Formatted Date
@@ -84,7 +84,7 @@
                     </label>
 
                     <!--Time Format Customisation-->
-                    <h2>Time Format</h2>
+                    <h2 id="settingsHeading">Time Format</h2>
                     <label style="font-size: 1.2em;">
                         <input type="radio" name="ttype" value="24hr" checked>
                         24-Hour Clock
@@ -95,7 +95,7 @@
                     </label>
 
                     <!--Date & Time Placement Customisation-->
-                    <h2>Date & Time Placement</h2>
+                    <h2 id="settingsHeading">Date & Time Placement</h2>
                     <label style="font-size: 1.2em;">
                         <input type="radio" name="ptype" value="start">
                         Left
@@ -108,7 +108,7 @@
                         <input type="radio" name="ptype" value="center">
                         Center
                     </label>
-                    <button id="closePopupSet">Close</button>   
+                    
                     <div id="bottominfo">
                         <a href="https://github.com/harryfrzz/Aura"><img id="social-github" src="icons/github-mark-white.png" width="35" height="35"></a>
                     </div>
@@ -142,7 +142,7 @@
 
     <!--JS Scripts-->
     <script src="Scripts/Fullscreen.js"></script>
-    <script src="Scripts/UnsplashBg.js"></script>
+    <!--<script src="Scripts/UnsplashBg.js"></script>-->
     <script src="Scripts/DateTypeSelector.js"></script>
     <script src="Scripts/Settings.js"></script>
     <script src="Scripts/LocalStorageLinks.js"></script>

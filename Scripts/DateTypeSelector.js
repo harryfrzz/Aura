@@ -162,10 +162,13 @@ function changePlacement(){
     const selectedFormat = document.querySelector("input[name='ptype']:checked").value;
     if (selectedFormat == "start") {
         dtplacement.style.textAlign = "start";
+        dtplacement.style.left = "10%";
     } else if (selectedFormat == "end") {
         dtplacement.style.textAlign = "end";
+        dtplacement.style.left = "90%";
     } else if(selectedFormat == "center"){
         dtplacement.style.textAlign = "center";
+        dtplacement.style.left = "50%";
     }
     localStorage.setItem("selectedPlacementFormat", selectedFormat);
 }

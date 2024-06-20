@@ -21,7 +21,6 @@
     scale: 0.7;
     border-radius: 20px;
     overflow-y: scroll;
-    background-color: rgba(68, 68, 68, 0.288);
     backdrop-filter: blur(10px);
     height: fit-content;
     width: fit-content;
