@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html id="main" lang="en">
 <head>
     <!--Meta Tags-->
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <!--CSS Styling Files-->
-    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/Main.css">
     <link rel="stylesheet" href="styles/Widget.css">
     <link rel="stylesheet" href="styles/Popup.css">
     <link rel="icon" href="icons/title-bar-logo.png">
@@ -18,13 +18,13 @@
         <img id="fullscreen" src="icons/fullscreen.png" width="30" height="30">
     </div>
     <!--Grid Item for displaying time,date and greeting message-->
-    <div id="grid">
-        <div id="griditem">
-            <h1 id="time">00:00</h1>
-            <h2 id="date">It's Wednesday</h2>
-            <h2 id="greetingMessage">Good morning!</h2>
-        </div>
+
+    <div id="info">
+        <h1 id="time">00:00</h1>
+        <h2 id="date">It's Wednesday</h2>
+        <h2 id="greetingMessage">Good morning!</h2>
     </div>
+
     <!--This area is used for inserting the links that the user inputs-->
     <div id="link-area">
         <div id="linksBox">
@@ -127,6 +127,7 @@
 
     <!--JS Scripts-->
     <script src="Scripts/Fullscreen.js"></script>
+    <script src="Scripts/UnsplashBg.js"></script>
     <script src="Scripts/DateTypeSelector.js"></script>
     <script src="Scripts/Settings.js"></script>
     <script src="Scripts/LocalStorageLinks.js"></script>

@@ -39,7 +39,6 @@ function twelveHour(){
     const d = new Date();
     let hour = d.getHours();
     let minutes = d.getMinutes();
-    let seconds = d.getSeconds();
     hour = hour < 10 ? "0" + hour : hour;
     minutes = minutes < 10 ? "0" + minutes : minutes;
     if(hour == 0){
@@ -47,7 +46,7 @@ function twelveHour(){
     }else if(hour == 12){
         time =  `12:${minutes} PM`;
     }else if(hour < 12){
-        time = `${hour}:${minutes}:${seconds} AM`;
+        time = `${hour}:${minutes} AM`;
     }else {
         var t_hour = hour % 12;
         if(t_hour < 10){

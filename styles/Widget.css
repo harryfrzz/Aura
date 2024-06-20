@@ -8,15 +8,17 @@
 }
 #gridView{
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     margin-bottom: 50px;
     padding: 20px;
     border-radius: 25px;
 }
 #quickLinks{
-    scale: 0.8;
+    position: fixed;
+    bottom: 0;
+    scale: 0.7;
     border-radius: 20px;
-    margin-top: -230px;
     overflow-y: scroll;
     background-color: rgba(68, 68, 68, 0.288);
     backdrop-filter: blur(10px);
