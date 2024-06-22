@@ -11,7 +11,7 @@
     position: fixed;
     bottom: 0;
     scale: 0.7;
-    background-color: rgba(59, 59, 59, 0.473);
+    background-color: rgba(59, 59, 59, 0.192);
     border-radius: 20px;
     overflow-y: none;
     backdrop-filter: blur(10px);
@@ -29,7 +29,7 @@
     width: 70px;
     height: 70px;
     padding: 10px;
-    background-color: rgba(59, 59, 59, 0.473);
+    background-color: rgba(59, 59, 59, 0.418);
     border-radius: 20px;
     transition: 0.1s ease;
 }
