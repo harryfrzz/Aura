@@ -4,7 +4,7 @@
   <img alt="Shows an illustrated sun in light mode and a moon with stars in dark mode." src="https://github.com/harryfrzz/Aura/blob/main/icons/github%20logo.png">
 </picture>
 
-## Aura is a Chrome extension which is be used to beautify your home page and make it your own :sparkles:
+## Aura is a Chrome extension which is used to beautify your home page and make it your own :sparkles:
 
 It is built using pure HTML,CSS and Javascript making it easier for developers to add new features.
 It uses local storage for storing data, like the custom links that users add to the customisation choices that the user have made.
