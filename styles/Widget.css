@@ -1,11 +1,3 @@
-/*ScrollBar Features*/
-#quickLinks::-webkit-scrollbar{
-    display: none;
-}
-.container{
-    display: flex;
-    justify-content: center;
-}
 /*Quicklinks widget*/
 #gridView{
     display: flex;
@@ -19,8 +11,9 @@
     position: fixed;
     bottom: 0;
     scale: 0.7;
+    background-color: rgba(59, 59, 59, 0.473);
     border-radius: 20px;
-    overflow-y: scroll;
+    overflow-y: none;
     backdrop-filter: blur(10px);
     height: fit-content;
     width: fit-content;
@@ -28,6 +21,7 @@
 }
 #appHolder{
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     gap: 20px;
 }
@@ -41,8 +35,4 @@
 }
 #appItem:hover{
     scale: 1.2;
-}
-#itemBar{
-    display:flex; 
-    justify-content: space-between;
 }
