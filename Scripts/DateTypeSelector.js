@@ -160,16 +160,19 @@ placementSelector.forEach(radio => {
 });
 function changePlacement(){
     const selectedFormat = document.querySelector("input[name='ptype']:checked").value;
-    if (selectedFormat == "start") {
-        dtplacement.style.textAlign = "start";
-        dtplacement.style.left = "10%";
-    } else if (selectedFormat == "end") {
-        dtplacement.style.textAlign = "end";
-        dtplacement.style.left = "90%";
-    } else if(selectedFormat == "center"){
+    const selectedTimeFormat = document.querySelector("input[name='ttype']:checked").value;
+     if(selectedFormat == "center"){
         dtplacement.style.textAlign = "center";
         dtplacement.style.left = "50%";
-    }
+     }else if (selectedFormat == "start" && selectedTimeFormat === "12hr") {
+        dtplacement.style.marginLeft = "100px";
+        dtplacement.style.textAlign = "start";
+        dtplacement.style.left = "10%";
+     }else if (selectedFormat == "start" && selectedTimeFormat === "24hr"){
+        dtplacement.style.marginLeft = "0px";   
+        dtplacement.style.textAlign = "start";
+        dtplacement.style.left = "10%";
+     }
     localStorage.setItem("selectedPlacementFormat", selectedFormat);
 }
 window.addEventListener("load", () => {
