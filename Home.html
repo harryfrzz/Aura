@@ -7,14 +7,13 @@
     <link rel="stylesheet" href="styles/Main.css">
     <link rel="stylesheet" href="styles/Widget.css">
     <link rel="stylesheet" href="styles/Popup.css">
-    <link rel="stylesheet" href="styles/To-do.css">
-   
     <link rel="icon" href="icons/title-bar-logo.png">
     <title>New Tab</title>
 </head>
 <body>
     <!--Fixed Bottom Bar for buttons like fullscreen and add link-->
     <div id="bottomBar">
+        <img src="icons/right.png" id="nextBtn" width="30" height="30">
         <button id="addLink" src="icons/add.png" width="30" height="30">Add Link</button>
         <img id="settings" src="icons/settings.png" width="30" height="30">
         <img id="fullscreen" src="icons/fullscreen.png" width="30" height="30">
@@ -43,12 +42,6 @@
                     <button type="submit" id="linkAddBtn">Add</button>
                     <button id="closePopup">Close</button>
                 </div>
-            </div>
-             <!--Added feature of to-do list-->
-            <div id="to-do">
-                <button id="add-todo-btn">To-Do</button>
-                <ul id="todo-list"></ul>
-                <input id="todo-input" type="text" placeholder="Enter task">
             </div>
             <!--Popup windows for Settings window-->
             <div id="settingsPopup" class="popupSettings">
@@ -109,13 +102,17 @@
                         Left
                     </label>
                     <label style="font-size: 1.2em;">
-                        <input type="radio" name="ptype" value="end">
-                        Right
-                    </label>
-                    <label style="font-size: 1.2em;">
                         <input type="radio" name="ptype" value="center" checked>
                         Center
                     </label>
+
+                    <!--Date & Time Color Customisation-->
+                    <h2 id="textColor">Text Color</h2>
+                    <label style="font-size: 1.2em;">
+                        <input type="color" name="colorSelector" id="clrSelector">
+                        Select Color
+                    </label>
+                    <button type="submit" id="setColor">Apply Color</button>
                     
                     <div id="bottominfo">
                         <a href="https://github.com/harryfrzz/Aura"><img id="social-github" src="icons/github-mark-white.png" width="35" height="35"></a>
@@ -156,6 +153,5 @@
     <script src="Scripts/LocalStorageLinks.js"></script>
     <script src="Scripts/AddLinkPopUp.js"></script>
     <script src="Scripts/FontSelector.js"></script>
-    <script src="Scripts/To-do.js"></script>
 </body>
 </html>
