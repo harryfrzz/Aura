@@ -26,7 +26,6 @@
         <h2 id="date">It's Wednesday</h2>
         <h2 id="greetingMessage">Good morning!</h2>
     </div>
-
     <!--This area is used for inserting the links that the user inputs-->
     <div id="link-area">
         <div id="linksBox">
@@ -45,10 +44,10 @@
                 </div>
             </div>
              <!--Added feature of to-do list-->
-            <div id="to-do">
-                <button id="add-todo-btn">To-Do</button>
+             <div id="to-do">
+                <input id="todo-input" type="text" placeholder="Add to-do item">
+                <button id="add-todo-btn">To-do</button>
                 <ul id="todo-list"></ul>
-                <input id="todo-input" type="text" placeholder="Enter task">
             </div>
             <!--Popup windows for Settings window-->
             <div id="settingsPopup" class="popupSettings">
@@ -116,7 +115,15 @@
                         <input type="radio" name="ptype" value="center" checked>
                         Center
                     </label>
-                    
+
+                    <!-- Additional settings button -->
+                    <button id="settings-btn">Additional Settings</button>
+                    <div id="settings-container" style="display: none;">
+                        <label>
+                        <input type="checkbox" id="todo-list-enabled">
+                        To-Do List
+                        </label>
+                    </div>
                     <div id="bottominfo">
                         <a href="https://github.com/harryfrzz/Aura"><img id="social-github" src="icons/github-mark-white.png" width="35" height="35"></a>
                     </div>
