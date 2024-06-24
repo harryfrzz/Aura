@@ -13,10 +13,17 @@
 <body>
     <!--Fixed Bottom Bar for buttons like fullscreen and add link-->
     <div id="bottomBar">
-        <img src="icons/right.png" id="nextBtn" width="30" height="30">
-        <button id="addLink" src="icons/add.png" width="30" height="30">Add Link</button>
+        <img id="addLink" src="icons/add.png" width="30" height="30">
+        <img id="nextBtn" src="icons/right.png"  width="30" height="30">
         <img id="settings" src="icons/settings.png" width="30" height="30">
+        <img id="widgets" src="icons/widgets.png" width="30" height="30">
         <img id="fullscreen" src="icons/fullscreen.png" width="30" height="30">
+    </div>
+    <div id="batteryPanel">
+        <div id="batteryLevel">
+            <h2 id="batteryText">100%</h2>
+            <img id="isCharging" src="icons/charging.png" width="20" height="20">
+        </div>
     </div>
     <!--Grid Item for displaying time,date and greeting message-->
 
@@ -119,6 +126,23 @@
                     </div>
                 </div>
             </div>
+            <!--Popup windows for widget window-->
+            <div id="widgetPopup" class="popupWidget">
+                <div class="popupWidgets-content">
+                    <h1>Widgets</h1>
+                    <div id="batteryWidget">
+                        <h3>Battery</h3>
+                        <label><input type="radio" value="on" name="batteryLevelWidget">On</label>
+                        <label><input type="radio" value="off" name="batteryLevelWidget" checked>Off</label>
+                    </div>
+                    <div id="linksWidget">
+                        <h3>Quick Links Bar</h3>
+                        <label><input type="radio" value="on" name="QuickLinksWidget">On</label>
+                        <label><input type="radio" value="off" name="QuickLinksWidget" checked>Off</label>
+                    </div>
+                    <button id="closeWidgetPopup">Close</button>
+                </div>
+            </div>
         </div>
     </div>  
 
@@ -139,6 +163,7 @@
             </div>
         </div>
     </div>
+    
 
     <!--Author Attribution for unsplash-->
     <footer>
@@ -148,10 +173,12 @@
     <!--JS Scripts-->
     <script src="Scripts/Fullscreen.js"></script>
     <script src="Scripts/UnsplashBg.js"></script>
-    <script src="Scripts/DateTypeSelector.js"></script>
+    <script src="Scripts/DateTypeSelector.js"></script> 
     <script src="Scripts/Settings.js"></script>
     <script src="Scripts/LocalStorageLinks.js"></script>
+    <script src="Scripts/WidgetPopup.js"></script>
     <script src="Scripts/AddLinkPopUp.js"></script>
     <script src="Scripts/FontSelector.js"></script>
+    <script src="Scripts/BatteryWidget.js"></script>
 </body>
 </html>

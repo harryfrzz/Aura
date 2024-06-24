@@ -26,12 +26,11 @@ body{
 
 /*Main Grid View*/
 #info{
+    display: none;
     width: max-content;
     height: fit-content;
     position: fixed;
-    top: 50%;
     text-align: center;
-    left: 50%;
     transform: translate(-50%, -50%);
     color: white;
 }
@@ -98,16 +97,6 @@ body{
 #link:hover{
     text-decoration: underline;
 }
-#addLink{
-    color: black;
-    font-family: "quicksand";
-    font-weight: 600;
-    margin-top: 2px;
-    padding: 10px;
-    background-color: rgb(255, 208, 182);
-    border-radius: 10px;
-    border: none;
-}
 .delete-button{
     display: none;
     margin-top: 18px;
@@ -132,19 +121,33 @@ body{
     right: 0;
     bottom: 0;
     margin: 8px;
-    border-radius: 20px;
+    border-radius: 35px;
+}
+#addLink{
+    margin-top: 3px;
+    border-radius: 5px;
+}
+#addLink:hover{
+    background-color: rgba(107, 107, 107, 0.548);
+    border-radius: 50%;
 }
 #fullscreen{
-    margin-top: 5px;
+    margin-top: 3px;
     margin-right: 5px;
 }
 #settings{
-    margin-top: 5px;
+    margin-top: 3px;
 }
 #nextBtn{
-    margin-top: 5px;
+    margin-top: 3px;
 }
-
+#widgets{
+    margin-top: 3px;
+}
+#nextBtn:hover{
+    background-color: rgba(107, 107, 107, 0.548);
+    border-radius: 50%;
+}
 /*Author attribution style for unsplash API*/
 
 #attribution{

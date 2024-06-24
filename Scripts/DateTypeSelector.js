@@ -160,10 +160,14 @@ function changePlacement(){
     const selectedFormat = document.querySelector("input[name='ptype']:checked").value;
     const selectedTimeFormat = document.querySelector("input[name='ttype']:checked").value;
     if(selectedFormat == "center"){
+        dtplacement.style.display = "block";
+        dtplacement.style.top = "50%";
         dtplacement.style.textAlign = "center";
         dtplacement.style.left = "50%";
         dtplacement.style.marginLeft = "0"; 
     } else if (selectedFormat == "start") {
+        dtplacement.style.display = "block";
+        dtplacement.style.top = "50%";
         dtplacement.style.textAlign = "start";
         dtplacement.style.left = "10%";
         dtplacement.style.marginLeft = "100px";

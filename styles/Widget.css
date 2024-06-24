@@ -36,3 +36,37 @@
 #appItem:hover{
     scale: 1.2;
 }
+/*Battery Widget*/
+#batteryPanel{
+    display: none;
+    position: fixed;
+    left: 20px;
+    margin-top: 20px;
+    width: 150px;
+    height: 75px;
+    border-radius: 15px;
+    color: white;
+    background-color: rgba(4, 4, 4, 0.219);
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+}
+#batteryLevel{ 
+    display: flex;
+    justify-content: start;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(29, 206, 109, 0.521);
+    backdrop-filter: blur(10px);
+}
+#batteryText{
+    font-family: "Open Sans";
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-top: 23px;
+    margin-left: 5px;
+}
+#isCharging{
+    display: none;
+    margin-top: 27px;
+    margin-left: 70px;
+}
