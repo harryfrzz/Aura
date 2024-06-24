@@ -18,6 +18,8 @@ It uses local storage for storing data, like the custom links that users add to 
 * **Clock customisation** - Users can change the fonts of the clock to any of the fonts that are given in the extension.
 * **Clock format changer** - Users can change the clock format to 12 hour or 24 hour according to their preference.
 * **Date format changer** - Users can change the date format from Normal format ie; Wednesday,19 June or the text format ie; It’s Wednesday.
+* **Date & Time placement changer** - Users can change the placement of the date & time info.
+* **Date & Time color changer** - Users can change the color of the date & time. 
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="[https://github.com/harryfrzz/Aura/blob/main/Screenshots/home-main-features.png]">
@@ -28,7 +30,6 @@ It uses local storage for storing data, like the custom links that users add to 
 ### Features that will be implemented in the future :dart: :
 * **Widgets integration** 
 * **Spotify api integration** 
-* **Date and Time placement changer** (Added)
 * **And more customisation options !**
 
 ## NOTE :pushpin: 
