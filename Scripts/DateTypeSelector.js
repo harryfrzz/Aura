@@ -102,7 +102,6 @@ function greetingMessage(){
     }
 }
 
-
 //Function to update the time format
 function updateTimeFormat(){
     const selectedTimeFormat = document.querySelector("input[name='ttype']:checked").value;
@@ -115,6 +114,17 @@ function updateTimeFormat(){
     localStorage.setItem("selectedTimeFormat", selectedTimeFormat);
 }
 setInterval(updateTimeFormat, 1000);
+
+//Function to update the Date format
+function updateDateDisplay() {
+    const selectedFormat = document.querySelector("input[name='dtype']:checked").value;
+    if (selectedFormat === "formatted") {
+        dateHeading.textContent = dateFormat;
+    } else if (selectedFormat === "text") {
+        dateHeading.textContent = textDate();
+    }
+    localStorage.setItem("selectedDateFormat", selectedFormat);
+}
 
 
 //Radio button Selector for Time Format
@@ -130,17 +140,6 @@ window.addEventListener("load", () => {
 });
 
 
-//Function to update the Date format
-function updateDateDisplay() {
-    const selectedFormat = document.querySelector("input[name='dtype']:checked").value;
-    if (selectedFormat === "formatted") {
-        dateHeading.textContent = dateFormat;
-    } else if (selectedFormat === "text") {
-        dateHeading.textContent = textDate();
-    }
-    localStorage.setItem("selectedDateFormat", selectedFormat);
-}
-
 //Radio Button selector for Date Format
 dateSelector.forEach(radio => {
     radio.addEventListener("change", updateDateDisplay);
@@ -153,7 +152,6 @@ window.addEventListener("load", () => {
     updateDateDisplay();
 });
 
-
 //Radio Button selector for Date & Time placement Format
 placementSelector.forEach(radio => {
     radio.addEventListener("change", changePlacement);
@@ -161,18 +159,18 @@ placementSelector.forEach(radio => {
 function changePlacement(){
     const selectedFormat = document.querySelector("input[name='ptype']:checked").value;
     const selectedTimeFormat = document.querySelector("input[name='ttype']:checked").value;
-     if(selectedFormat == "center"){
+    if(selectedFormat == "center"){
         dtplacement.style.textAlign = "center";
         dtplacement.style.left = "50%";
-     }else if (selectedFormat == "start" && selectedTimeFormat === "12hr") {
+        dtplacement.style.marginLeft = "0"; 
+    } else if (selectedFormat == "start") {
+        dtplacement.style.textAlign = "start";
+        dtplacement.style.left = "10%";
         dtplacement.style.marginLeft = "100px";
-        dtplacement.style.textAlign = "start";
-        dtplacement.style.left = "10%";
-     }else if (selectedFormat == "start" && selectedTimeFormat === "24hr"){
-        dtplacement.style.marginLeft = "0px";   
-        dtplacement.style.textAlign = "start";
-        dtplacement.style.left = "10%";
-     }
+        if (selectedTimeFormat === "24hr"){
+            dtplacement.style.marginLeft = "100px";
+        }
+    }
     localStorage.setItem("selectedPlacementFormat", selectedFormat);
 }
 window.addEventListener("load", () => {
@@ -182,6 +180,24 @@ window.addEventListener("load", () => {
     }
     changePlacement();
 });
+
+//Code to change the color of the date,time and greeting message
+function colorChange(){
+    const setBtn = document.getElementById("setColor");
+    setBtn.addEventListener("click",() =>{
+        var color = document.getElementById("clrSelector").value;
+        dtplacement.style.color = color;
+        localStorage.setItem("selectedColor", color);
+    });
+}
+window.addEventListener("load",()=>{
+    const savedFormat = localStorage.getItem("selectedColor");
+    if(savedFormat){
+        dtplacement.style.color = savedFormat;
+        document.getElementById("clrSelector").value = savedFormat;
+    }
+    colorChange();
+})
 
 greetingMessage();
 twentyFourHour();

@@ -13,6 +13,7 @@
 <body>
     <!--Fixed Bottom Bar for buttons like fullscreen and add link-->
     <div id="bottomBar">
+        <img src="icons/right.png" id="nextBtn" width="30" height="30">
         <button id="addLink" src="icons/add.png" width="30" height="30">Add Link</button>
         <img id="settings" src="icons/settings.png" width="30" height="30">
         <img id="fullscreen" src="icons/fullscreen.png" width="30" height="30">
@@ -104,6 +105,14 @@
                         <input type="radio" name="ptype" value="center" checked>
                         Center
                     </label>
+
+                    <!--Date & Time Color Customisation-->
+                    <h2 id="textColor">Text Color</h2>
+                    <label style="font-size: 1.2em;">
+                        <input type="color" name="colorSelector" id="clrSelector">
+                        Select Color
+                    </label>
+                    <button type="submit" id="setColor">Apply Color</button>
                     
                     <div id="bottominfo">
                         <a href="https://github.com/harryfrzz/Aura"><img id="social-github" src="icons/github-mark-white.png" width="35" height="35"></a>

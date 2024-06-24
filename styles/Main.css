@@ -26,9 +26,6 @@ body{
 
 /*Main Grid View*/
 #info{
-    /*display: flex;
-    flex-direction: column;
-    margin: 12% 50px auto;*/
     width: max-content;
     height: fit-content;
     position: fixed;
@@ -36,19 +33,18 @@ body{
     text-align: center;
     left: 50%;
     transform: translate(-50%, -50%);
+    color: white;
 }
 
 /*Time and Date*/
 #time{
     font-family: "Open Sans";
-    color: white;
     font-size: 7em;
 }
 #date{
     margin-top: -70px;
     font-family: "Open Sans";
     font-weight: 300;
-    color: white;
     font-size: 3em;
 }
 
@@ -58,7 +54,6 @@ body{
     margin-top: -30px;
     font-family: "Quicksand";
     font-weight: 400;
-    color: white;
     font-size: 3em;
 }
 
@@ -144,6 +139,9 @@ body{
     margin-right: 5px;
 }
 #settings{
+    margin-top: 5px;
+}
+#nextBtn{
     margin-top: 5px;
 }
 

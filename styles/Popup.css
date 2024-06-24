@@ -120,7 +120,17 @@
 #closePopupSet{
     position: fixed;
     top: 0;
-    margin-top: 30px;}
+    margin-top: 30px;
+}
+#setColor{
+    width: max-content;
+    height: fit-content;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(255, 208, 182);
+    border: none;
+    outline: none;
+}
 .showSettings {
     display: block;
 }
