@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--Meta Tags-->
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <!--CSS Styling Files-->
+    <link rel="stylesheet" href="styles/Main.css">
+    <link rel="stylesheet" href="styles/Widget.css">
+    <link rel="stylesheet" href="styles/Popup.css">
+    <link rel="icon" href="icons/title-bar-logo.png">
+    <title>New Tab</title>
+</head>
+<body>
+    <!--Fixed Bottom Bar for buttons like fullscreen and add link-->
+    <div id="bottomBar">
+        <img src="icons/right.png" id="nextBtn" width="30" height="30">
+        <button id="addLink" src="icons/add.png" width="30" height="30">Add Link</button>
+        <img id="settings" src="icons/settings.png" width="30" height="30">
+        <img id="fullscreen" src="icons/fullscreen.png" width="30" height="30">
+    </div>
+    <!--Grid Item for displaying time,date and greeting message-->
+
+    <div id="info">
+        <h1 id="time">00:00</h1>
+        <h2 id="date">It's Wednesday</h2>
+        <h2 id="greetingMessage">Good morning!</h2>
+    </div>
+
+    <!--This area is used for inserting the links that the user inputs-->
+    <div id="link-area">
+        <div id="linksBox">
+            <!--The links will be added into this Linkholder div dynamically through js script-->
+            <div id="linkHolder">
+            </div>
+            <!--Popup windows for adding custom links-->
+            <div id="linkPopup" class="popup">
+                <div class="popup-content">
+                    <h1 style="color: white; font-family: 'Open Sans'; font-weight: 400;">
+                        Add link</h1>
+                    <input type="text" placeholder="Enter Name" id="linkName">
+                    <input type="text" placeholder="Link Address" id="linkSpace">
+                    <button type="submit" id="linkAddBtn">Add</button>
+                    <button id="closePopup">Close</button>
+                </div>
+            </div>
+            <!--Popup windows for Settings window-->
+            <div id="settingsPopup" class="popupSettings">
+                <div class="popupSettings-content">
+                    <!--Aura logo-->
+                    <img src="icons/close.png" width="30" height="30" id="closePopupSet">  
+                    <center>
+                        <img src="icons/Logo.png" height="250" width="250">
+                    </center>
+
+                    <!--Clock customisation Part-->
+                    <h2 id="settingsHeading">Clock Customisation</h2>
+                    <!--Font 1-->
+                    <label style="font-family: 'quicksand'; font-size: 1.2em;">
+                    <input type="radio" id="clockstyle-1" name="font" value="Quicksand">Quicksand</label>
+                    <!--Font 2-->
+                    <label style="font-family: 'Cactus Classical Serif'; font-size: 1.2em;">
+                    <input type="radio" id="clockstyle-2" name="font" value="Cactus Classical Serif">Cactus Classical Serif</label>
+                    <!--Font 3-->
+                    <label style="font-family: 'Open Sans'; font-size: 1.2em;">
+                    <input type="radio" id="clockstyle-3" name="font" value="Open Sans" checked>Open Sans</label>
+                    <!--Font 4-->
+                    <label style="font-family: 'Tiny5'; font-size: 1.2em;">
+                    <input type="radio" id="clockstyle-4" name="font" value="Tiny5">Tiny5</label>
+                    <!--Font 5-->
+                    <label style="font-family: 'Oswald'; font-size: 1.2em;">
+                        <input type="radio" id="clockstyle-4" name="font" value="Oswald">Oswald</label>
+                    <!--Font 6-->
+                    <label style="font-family: 'Raleway'; font-size: 1.2em;">
+                        <input type="radio" id="clockstyle-4" name="font" value="Raleway">Raleway</label>
+
+                    <!--Date Format Customisation-->
+                    <h2 id="settingsHeading">Date Format</h2>
+                    <label style="font-size: 1.2em;">
+                        <input type="radio" name="dtype" value="formatted">
+                        Formatted Date
+                    </label>
+                    <label style="font-size: 1.2em;">
+                        <input type="radio" name="dtype" value="text" checked>
+                        Text Date
+                    </label>
+
+                    <!--Time Format Customisation-->
+                    <h2 id="settingsHeading">Time Format</h2>
+                    <label style="font-size: 1.2em;">
+                        <input type="radio" name="ttype" value="24hr" checked>
+                        24-Hour Clock
+                    </label>
+                    <label style="font-size: 1.2em;">
+                        <input type="radio" name="ttype" value="12hr">
+                        12-Hour Clock
+                    </label>
+
+                    <!--Date & Time Placement Customisation-->
+                    <h2 id="settingsHeading">Date & Time Placement</h2>
+                    <label style="font-size: 1.2em;">
+                        <input type="radio" name="ptype" value="start">
+                        Left
+                    </label>
+                    <label style="font-size: 1.2em;">
+                        <input type="radio" name="ptype" value="center" checked>
+                        Center
+                    </label>
+
+                    <!--Date & Time Color Customisation-->
+                    <h2 id="textColor">Text Color</h2>
+                    <label style="font-size: 1.2em;">
+                        <input type="color" name="colorSelector" id="clrSelector">
+                        Select Color
+                    </label>
+                    <button type="submit" id="setColor">Apply Color</button>
+                    
+                    <div id="bottominfo">
+                        <a href="https://github.com/harryfrzz/Aura"><img id="social-github" src="icons/github-mark-white.png" width="35" height="35"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>  
+
+    <!--Link Dock-->
+    <div class="container">
+        <div id="gridView">
+            <div id="quickLinks">
+                <div id="appHolder">
+                    <a href="https://open.spotify.com/" target="_blank"><img id="appItem" src="icons/spotify.png"></a>
+                    <a href="https://www.netflix.com/" target="_blank"><img id="appItem" src="icons/netflix.png"></a>
+                    <a href="https://www.youtube.com/" target="_blank"><img id="appItem" src="icons/youtube.png"></a>
+                    <a href="https://tv.apple.com/" target="_blank"><img id="appItem" src="icons/appletv.png"></a>
+                    <a href="https://mail.google.com/" target="_blank"><img id="appItem" src="icons/gmail.png"></a>
+                    <a href="https://docs.google.com/" target="_blank"><img id="appItem" src="icons/googledocs.png"></a>
+                    <a href="https://chat.openai.com/" target="_blank"><img id="appItem" src="icons/chatgpt.png"></a>
+                    <a href="https://github.com/" target="_blank"><img id="appItem" src="icons/github-mark-white.png"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Author Attribution for unsplash-->
+    <footer>
+        <p id="attribution">Photo by Annie Spratt on Unsplash</p>
+    </footer>
+
+    <!--JS Scripts-->
+    <script src="Scripts/Fullscreen.js"></script>
+    <script src="Scripts/UnsplashBg.js"></script>
+    <script src="Scripts/DateTypeSelector.js"></script>
+    <script src="Scripts/Settings.js"></script>
+    <script src="Scripts/LocalStorageLinks.js"></script>
+    <script src="Scripts/AddLinkPopUp.js"></script>
+    <script src="Scripts/FontSelector.js"></script>
+</body>
+</html>
