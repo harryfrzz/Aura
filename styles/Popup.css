@@ -5,15 +5,15 @@
     left: 0;
     top: 0;
     width: 100%;
-    background-color: rgba(51, 51, 51, 0.26);
-    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.295);
     height: 100%;
     overflow: auto;
     display: none;
 }
 .popup-content {
     display: flex;
-    background-color: rgb(3, 3, 3);
+    background-color: rgba(51, 51, 51, 0.26);
+    backdrop-filter: blur(10px);
     margin: 20% auto;
     padding: 20px;
     width: 50vw;
@@ -26,6 +26,9 @@
 }
 .show {
     display: block;
+}
+#linkSpace::placeholder{
+    color: white;
 }
 #linkSpace{
     color: white;
@@ -40,6 +43,9 @@
     border-bottom-style: solid;
     border-width: 1px;
     outline: none;
+}
+#linkName::placeholder{
+    color: white;
 }
 #linkName{
     color: white;
@@ -66,7 +72,8 @@
     margin-right: 10px;
     border-radius: 10px;
     border: none;
-    background-color: rgb(255, 208, 182);
+    color: white;
+    background-color: rgba(48, 48, 48, 0.411);
 
 }
 #closePopup{
@@ -78,7 +85,8 @@
     padding: 12px;
     border-radius: 10px;
     border: none;
-    background-color: rgb(255, 208, 182);
+    color: white;
+    background-color: rgba(48, 48, 48, 0.411);
 }
 
 /*Settings Popup*/
