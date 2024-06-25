@@ -127,7 +127,8 @@
     height: fit-content;
     padding: 10px;
     border-radius: 10px;
-    background-color: rgb(255, 208, 182);
+    color: white;
+    background-color: rgba(143, 143, 143, 0.712);
     border: none;
     outline: none;
 }
@@ -145,6 +146,11 @@
     color: white;
     font-family: 'quicksand';
 }
+#clrSelector{
+    border: none;
+    background: none;
+}
+
 
 /*Widgets Popup*/
 .popupWidget{
@@ -166,6 +172,18 @@
     height: 100vh;
     font-weight: bolder;
     overflow: scroll;
+}
+.popupWidgets-content h2{
+    font-family: "quicksand";
+    color: white;
+}
+.popupWidgets-content label{
+    font-family: "quicksand";
+    color: white;
+    margin-top: 10px;
+}
+.popupWidgets-content::-webkit-scrollbar{
+    display: none;
 }
 .showWidget {
     display: block;

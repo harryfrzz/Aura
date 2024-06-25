@@ -1,4 +1,4 @@
-//Code for Add Link popup
+//Code for widget page popup
 const widgetBtn = document.getElementById("widgets");
 const closeWidgetPopup = document.getElementById("closeWidgetPopup");
 widgetBtn.addEventListener("click",function () {

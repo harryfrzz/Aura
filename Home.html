@@ -69,13 +69,13 @@
                     <input type="radio" id="clockstyle-2" name="font" value="Cactus Classical Serif">Cactus Classical Serif</label>
                     <!--Font 3-->
                     <label style="font-family: 'Open Sans'; font-size: 1.2em;">
-                    <input type="radio" id="clockstyle-3" name="font" value="Open Sans" checked>Open Sans</label>
+                    <input type="radio" id="clockstyle-3" name="font" value="Open Sans">Open Sans</label>
                     <!--Font 4-->
                     <label style="font-family: 'Tiny5'; font-size: 1.2em;">
                     <input type="radio" id="clockstyle-4" name="font" value="Tiny5">Tiny5</label>
                     <!--Font 5-->
                     <label style="font-family: 'Oswald'; font-size: 1.2em;">
-                        <input type="radio" id="clockstyle-4" name="font" value="Oswald">Oswald</label>
+                        <input type="radio" id="clockstyle-4" name="font" value="Oswald" checked>Oswald</label>
                     <!--Font 6-->
                     <label style="font-family: 'Raleway'; font-size: 1.2em;">
                         <input type="radio" id="clockstyle-4" name="font" value="Raleway">Raleway</label>
@@ -129,18 +129,16 @@
             <!--Popup windows for widget window-->
             <div id="widgetPopup" class="popupWidget">
                 <div class="popupWidgets-content">
-                    <h1>Widgets</h1>
-                    <div id="batteryWidget">
-                        <h3>Battery</h3>
-                        <label><input type="radio" value="on" name="batteryLevelWidget">On</label>
-                        <label><input type="radio" value="off" name="batteryLevelWidget" checked>Off</label>
-                    </div>
-                    <div id="linksWidget">
-                        <h3>Quick Links Bar</h3>
-                        <label><input type="radio" value="on" name="QuickLinksWidget">On</label>
-                        <label><input type="radio" value="off" name="QuickLinksWidget" checked>Off</label>
-                    </div>
-                    <button id="closeWidgetPopup">Close</button>
+                    <img src="icons/close.png" width="30" height="30" id="closeWidgetPopup">  
+                    <h1 style="margin-top: 55px; color: white; font-family: 'Open Sans';">Widgets</h1>
+
+                    <h2>Battery</h2>
+                    <label><input type="radio" value="on" name="batteryLevelWidget">On</label>
+                    <label><input type="radio" value="off" name="batteryLevelWidget" checked>Off</label>
+
+                    <h2>Quick Links Bar</h2>
+                    <label><input type="radio" value="on" name="QuickLinksWidget">On</label>
+                    <label><input type="radio" value="off" name="QuickLinksWidget" checked>Off</label>
                 </div>
             </div>
         </div>
@@ -174,9 +172,10 @@
     <script src="Scripts/Fullscreen.js"></script>
     <script src="Scripts/UnsplashBg.js"></script>
     <script src="Scripts/DateTypeSelector.js"></script> 
-    <script src="Scripts/Settings.js"></script>
+    <script src="Scripts/Settings.js"></script> 
     <script src="Scripts/LocalStorageLinks.js"></script>
     <script src="Scripts/WidgetPopup.js"></script>
+    <script src="Scripts/Widgets.js"></script>
     <script src="Scripts/AddLinkPopUp.js"></script>
     <script src="Scripts/FontSelector.js"></script>
     <script src="Scripts/BatteryWidget.js"></script>

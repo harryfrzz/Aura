@@ -1,3 +1,4 @@
+//Code for battery level indicator
 const batteryLevel = document.getElementById("batteryLevel");
 const batteryText = document.getElementById("batteryText");
 const chargingIndicator = document.getElementById("isCharging");
